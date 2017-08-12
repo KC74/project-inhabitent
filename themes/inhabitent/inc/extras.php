@@ -45,20 +45,15 @@ add_action('login_head', 'inhabitent_header_logo');
 
 /**
  * Change the default logo url to home page instead
- *
- * @param [type] $url
- * @return void
  */
 function inhabitent_the_url()
 {
-    return get_bloginfo( 'url' );
+    return get_home_url();
 }
 add_filter( 'login_headerurl', 'inhabitent_the_url' );
 
 /**
- * Undocumented function
- *
- * @return void
+ * Change login title
  */
 function inhabitent_login_title() {
 	return 'Inhabitent';
