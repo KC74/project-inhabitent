@@ -653,6 +653,27 @@ a {
   .site-content h2 {
     font-family: 'Novecento'; }
 
+.entry-header {
+  position: relative; }
+  .entry-header img {
+    width: 100%; }
+  .entry-header .entry-title, .entry-header .entry-meta {
+    position: absolute; }
+  .entry-header .entry-title {
+    top: 0;
+    left: 0;
+    background-color: #248A83;
+    padding: 0.50rem 1.5rem;
+    width: 75%;
+    margin-top: 2.25rem;
+    font-size: 2.35rem;
+    line-height: 1.2; }
+    .entry-header .entry-title a {
+      text-decoration: none;
+      color: #fff; }
+      .entry-header .entry-title a:hover {
+        color: #fff9c0; }
+
 .sticky {
   display: block; }
 
