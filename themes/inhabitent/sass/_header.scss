@@ -1,6 +1,18 @@
 /*--------------------------------------------------------------
 # Header Styles
 --------------------------------------------------------------*/
+.site-header {
+    width: 100%;
+}
+
+
+/* ------- Branding Styles ------- */
+.site-branding {
+    width: 50%;
+}
+
+
+/* ------- Logo styles ------- */
 
 .inhabitent-site-logo {
     background: url($logo__background-url) no-repeat;
@@ -8,3 +20,4 @@
     width: $logo__background-width;
     height: $logo__background-height;
 }
+

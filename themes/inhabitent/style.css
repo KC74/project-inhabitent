@@ -406,6 +406,14 @@ textarea {
 /*--------------------------------------------------------------
 # Header Styles
 --------------------------------------------------------------*/
+.site-header {
+  width: 100%; }
+
+/* ------- Branding Styles ------- */
+.site-branding {
+  width: 50%; }
+
+/* ------- Logo styles ------- */
 .inhabitent-site-logo {
   background: url("../../assets/images/logos/inhabitent-logo-tent.svg") no-repeat;
   background-size: 50px 33px;
@@ -568,15 +576,22 @@ a {
 --------------------------------------------------------------*/
 /* General */
 .container, .container-flex, .container-flex--row-nowrap {
-  width: 100%; }
+  width: 1120px;
+  margin: 0 auto; }
   .container-flex, .container-flex--row-nowrap {
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
     .container-flex--row-nowrap {
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap; }
 
 /* Posts and pages */
+.site-content {
+  width: 1120px;
+  margin: 0 auto; }
+
 .sticky {
   display: block; }
 

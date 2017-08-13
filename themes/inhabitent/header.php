@@ -32,7 +32,7 @@
 						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					</nav><!-- #site-navigation -->
-                </div>
+                </div> <!-- .container -->
             </header><!-- #masthead -->
 
             <div id="content" class="site-content">
