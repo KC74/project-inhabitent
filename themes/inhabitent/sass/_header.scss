@@ -1,0 +1,10 @@
+/*--------------------------------------------------------------
+# Header Styles
+--------------------------------------------------------------*/
+
+.inhabitent-site-logo {
+    background: url($logo__background-url) no-repeat;
+    background-size: $logo__background-width $logo__background-height;
+    width: $logo__background-width;
+    height: $logo__background-height;
+}

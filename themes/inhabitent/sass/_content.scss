@@ -2,6 +2,23 @@
 # Content
 --------------------------------------------------------------*/
 
+/* General */
+.container {
+	width: 100%;
+
+	// Flex container
+	&-flex {
+		@extend .container;
+			display: flex;
+
+		// row and no wrap
+		&--row-nowrap {
+			@extend .container-flex;
+			flex-flow: row nowrap;
+		}
+	}
+}
+
 /* Posts and pages */
 
 .sticky {

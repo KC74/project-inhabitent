@@ -404,6 +404,15 @@ textarea {
   width: 100%; }
 
 /*--------------------------------------------------------------
+# Header Styles
+--------------------------------------------------------------*/
+.inhabitent-site-logo {
+  background: url("../../assets/images/logos/inhabitent-logo-tent.svg") no-repeat;
+  background-size: 50px 33px;
+  width: 50px;
+  height: 33px; }
+
+/*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /* Links */
@@ -557,6 +566,16 @@ a {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+/* General */
+.container, .container-flex, .container-flex--row-nowrap {
+  width: 100%; }
+  .container-flex, .container-flex--row-nowrap {
+    display: -ms-flexbox;
+    display: flex; }
+    .container-flex--row-nowrap {
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap; }
+
 /* Posts and pages */
 .sticky {
   display: block; }
