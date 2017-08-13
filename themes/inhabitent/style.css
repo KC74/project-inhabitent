@@ -465,8 +465,9 @@ a {
     .main-navigation ul li.focus > ul {
       left: auto; }
   .main-navigation li {
-    float: left;
-    position: relative; }
+    float: right;
+    position: relative;
+    margin: 0 1.5rem; }
   .main-navigation a {
     display: block;
     text-decoration: none; }

@@ -25,7 +25,6 @@ a {
 }
 
 /* Menus */
-
 .main-navigation {
 	clear: both;
 	display: block;
@@ -45,7 +44,7 @@ a {
 			top: $base__space-unit;
 			left: -999rem;
 			z-index: 99999;
-
+			
 			ul {
 				left: -999rem;
 				top: 0;
@@ -77,8 +76,9 @@ a {
 		}
 	}
 	li {
-		float: left;
+		float: right; // consider changing to flex box?
 		position: relative;
+		margin: 0 $base__space-unit;
 
 		&:hover > a,
 		&.focus > a {
