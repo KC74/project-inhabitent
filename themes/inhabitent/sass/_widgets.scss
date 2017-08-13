@@ -1,9 +1,19 @@
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
+.widget-area {
+	padding: ($base__space-unit * 2) 0 ($base__space-unit * 2) ($base__space-unit * 2);
+	width: 27%;
+}
+
+.widget-title {
+	margin-top: 0;
+	margin-bottom: 2rem;
+}
+
 
 .widget {
-	margin: 0 0 $base__space-unit;
+	margin: 0 0 ($base__space-unit * 2);
 
 	/* Make sure select elements fit in widgets. */
 	select {
@@ -20,6 +30,7 @@
 			text-transform: none;
 		}
 	}
+
 }
 
 /* Search widget. */
