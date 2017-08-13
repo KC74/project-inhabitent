@@ -21,11 +21,24 @@
 	}
 }
 
+/* ------- Content Area ------- */
+.content-area {
+	padding: 3rem 5% 3rem 0;
+	width: 73%;
+	border-right: 1px solid $color__background-hr;
+}
+
 /* Posts and pages */
 
 .site-content {
+	@extend .container-flex;
 	width: $content__size-width;
 	margin: 0 auto;
+	padding-top: 3.5rem;
+
+	h2 {
+		font-family: 'Novecento';
+	}
 }
 
 .sticky {

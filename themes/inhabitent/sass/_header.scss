@@ -3,21 +3,30 @@
 --------------------------------------------------------------*/
 .site-header {
     width: 100%;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid $color__background-hr;
+    position: fixed;
+    background: hsla(0,0%,100%,.85);
+    z-index: 999;
 }
 
 
 /* ------- Branding Styles ------- */
-.site-branding {
-    width: 50%;
-}
+// .site-branding {
+//     width: 50%;
+// }
 
 
 /* ------- Logo styles ------- */
 
 .inhabitent-site-logo {
+    position: relative;
     background: url($logo__background-url) no-repeat;
     background-size: $logo__background-width $logo__background-height;
     width: $logo__background-width;
     height: $logo__background-height;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
 }
 

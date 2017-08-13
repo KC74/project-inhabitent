@@ -25,6 +25,7 @@ a {
 }
 
 /* Menus */
+
 .main-navigation {
 	clear: both;
 	display: block;
@@ -60,14 +61,6 @@ a {
 			a {
 				width: 200px;
 			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
 		}
 
 		li:hover > ul,
@@ -75,25 +68,21 @@ a {
 			left: auto;
 		}
 	}
+
 	li {
 		float: right; // consider changing to flex box?
 		position: relative;
-		margin: 0 $base__space-unit;
-
-		&:hover > a,
-		&.focus > a {
-		}
+		margin: $nav__link-top-bottom--spacing 0 $nav__link-top-bottom--spacing $base__space-unit;
 	}
 	a {
 		display: block;
 		text-decoration: none;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a {
+		font-family: 'Novecento';
+		text-transform: uppercase;
 	}
 }
+
+
 
 /* Small menu. */
 .menu-toggle,

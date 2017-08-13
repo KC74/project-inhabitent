@@ -1,3 +1,61 @@
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../../assets/fonts/merriweather-bold-webfont.woff2') format('woff2'),
+         url('../../assets/fonts/merriweather-bold-webfont.woff') format('woff'),
+         url('../../assets/fonts/merriweather-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../../assets/fonts/merriweather-bolditalic-webfont.woff2') format('woff2'),
+         url('../../assets/fonts/merriweather-bolditalic-webfont.woff') format('woff'),
+         url('../../assets/fonts/merriweather-bolditalic-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../../assets/fonts/merriweather-light-webfont.woff2') format('woff2'),
+         url('../../assets/fonts/merriweather-light-webfont.woff') format('woff'),
+         url('../../assets/fonts/merriweather-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../../assets/fonts/merriweather-lightitalic-webfont.woff2') format('woff2'),
+         url('../../assets/fonts/merriweather-lightitalic-webfont.woff') format('woff'),
+         url('../../assets/fonts/merriweather-lightitalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+@font-face {
+	font-family: 'Novecento';
+	src: url('../../assets/fonts/801c61f9a7c4eaea3d8ee1d3c4993ce9.woff2') format('woff2'),
+		url('../../assets/fonts/801c61f9a7c4eaea3d8ee1d3c4993ce9.woff') format('woff'),
+		url('../../assets/fonts/801c61f9a7c4eaea3d8ee1d3c4993ce9.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Novecento';
+	src: url('../../assets/fonts/364b2d4eabcd5577f4ce6b0acecf075b.woff2') format('woff2'),
+		url('../../assets/fonts/364b2d4eabcd5577f4ce6b0acecf075b.woff') format('woff'),
+		url('../../assets/fonts/364b2d4eabcd5577f4ce6b0acecf075b.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

@@ -222,6 +222,42 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../../assets/fonts/merriweather-bold-webfont.woff2") format("woff2"), url("../../assets/fonts/merriweather-bold-webfont.woff") format("woff"), url("../../assets/fonts/merriweather-bold-webfont.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../../assets/fonts/merriweather-bolditalic-webfont.woff2") format("woff2"), url("../../assets/fonts/merriweather-bolditalic-webfont.woff") format("woff"), url("../../assets/fonts/merriweather-bolditalic-webfont.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../../assets/fonts/merriweather-light-webfont.woff2") format("woff2"), url("../../assets/fonts/merriweather-light-webfont.woff") format("woff"), url("../../assets/fonts/merriweather-light-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../../assets/fonts/merriweather-lightitalic-webfont.woff2") format("woff2"), url("../../assets/fonts/merriweather-lightitalic-webfont.woff") format("woff"), url("../../assets/fonts/merriweather-lightitalic-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Novecento';
+  src: url("../../assets/fonts/801c61f9a7c4eaea3d8ee1d3c4993ce9.woff2") format("woff2"), url("../../assets/fonts/801c61f9a7c4eaea3d8ee1d3c4993ce9.woff") format("woff"), url("../../assets/fonts/801c61f9a7c4eaea3d8ee1d3c4993ce9.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Novecento';
+  src: url("../../assets/fonts/364b2d4eabcd5577f4ce6b0acecf075b.woff2") format("woff2"), url("../../assets/fonts/364b2d4eabcd5577f4ce6b0acecf075b.woff") format("woff"), url("../../assets/fonts/364b2d4eabcd5577f4ce6b0acecf075b.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -231,7 +267,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Merriweather";
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
@@ -304,7 +340,7 @@ blockquote, q {
     content: ""; }
 
 hr {
-  background-color: #ccc;
+  background-color: #e1e1e1;
   border: 0;
   height: 1px;
   margin-bottom: 1.5rem; }
@@ -407,29 +443,35 @@ textarea {
 # Header Styles
 --------------------------------------------------------------*/
 .site-header {
-  width: 100%; }
+  width: 100%;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e1e1e1;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 999; }
 
 /* ------- Branding Styles ------- */
-.site-branding {
-  width: 50%; }
-
 /* ------- Logo styles ------- */
 .inhabitent-site-logo {
+  position: relative;
   background: url("../../assets/images/logos/inhabitent-logo-tent.svg") no-repeat;
   background-size: 50px 33px;
   width: 50px;
-  height: 33px; }
+  height: 33px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%; }
 
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: #248A83; }
   a:visited {
-    color: purple; }
+    color: #248A83; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #2f1339; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -467,10 +509,12 @@ a {
   .main-navigation li {
     float: right;
     position: relative;
-    margin: 0 1.5rem; }
+    margin: 0.5rem 0 0.5rem 1.5rem; }
   .main-navigation a {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    font-family: 'Novecento';
+    text-transform: uppercase; }
 
 /* Small menu. */
 .menu-toggle,
@@ -567,6 +611,13 @@ a {
   /* Make sure select elements fit in widgets. */ }
   .widget select {
     max-width: 100%; }
+  .widget.widget_archive ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .widget.widget_archive ul li a {
+      text-decoration: none;
+      text-transform: none; }
 
 /* Search widget. */
 .widget_search .search-submit {
@@ -576,10 +627,10 @@ a {
 # Content
 --------------------------------------------------------------*/
 /* General */
-.container, .container-flex, .container-flex--row-nowrap {
+.container, .container-flex, .container-flex--row-nowrap, .site-content {
   width: 1120px;
   margin: 0 auto; }
-  .container-flex, .container-flex--row-nowrap {
+  .container-flex, .container-flex--row-nowrap, .site-content {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: justify;
@@ -588,10 +639,19 @@ a {
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap; }
 
+/* ------- Content Area ------- */
+.content-area {
+  padding: 3rem 5% 3rem 0;
+  width: 73%;
+  border-right: 1px solid #e1e1e1; }
+
 /* Posts and pages */
 .site-content {
   width: 1120px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-top: 3.5rem; }
+  .site-content h2 {
+    font-family: 'Novecento'; }
 
 .sticky {
   display: block; }
