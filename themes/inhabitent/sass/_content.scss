@@ -22,7 +22,7 @@
 }
 
 /* ------- Content Area ------- */
-.content-area {
+body:not(.page-template-about) .content-area {
 	padding: 3rem 5% 3rem 0;
 	width: 73%;
 	border-right: 1px solid $color__background-hr;
@@ -38,7 +38,7 @@
 }
 
 
-body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .entry-header {
+body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header {
 	position: relative;
 
 	img {
