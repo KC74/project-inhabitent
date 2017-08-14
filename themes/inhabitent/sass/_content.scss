@@ -36,17 +36,41 @@
 	margin: 0 auto;
 	padding-top: 3.5rem;
 }
+
+main.site-home {
+
+	.entry-header {
+		position: relative;
+		
+		.entry-title, .entry-meta {
+			position: absolute;
+			background-color: $color__link;
+			color: $color__background-body;
+			font-family: Novecento,sans-serif;
+
+			a {
+				color: $color__background-body;
+				text-decoration: none;
+
+				&:hover {
+					color: $color__background-ins;
+				}
+			}
+		}
+	}
+}
+
 .entry-header {
-	position: relative;
+	// position: relative;
 
 	img {
 		width: 100%;
 	}
 
 	.entry-title, .entry-meta {
-		position: absolute;
-		background-color: $color__link;
-		color: $color__background-body;
+		// position: absolute;
+		// background-color: $color__link;
+		// color: $color__background-body;
 		font-family: Novecento,sans-serif;
 
 		a {
