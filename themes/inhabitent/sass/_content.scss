@@ -75,6 +75,33 @@
 		margin-bottom: 0.4rem;
 		padding: 0.25rem 1.5rem;
 	}
+
+}
+
+.entry-content {
+	p {
+		line-height: 1.75;
+		font-family: $font__main;
+	}
+}
+
+.entry-readmore {
+	a {
+		@extend .link-reset;
+		color: #000;
+		background: #fff;
+		border: 1px solid #000;
+		padding: 0.75rem $base__space-unit;
+		text-transform: uppercase;
+		font-family: $font__entry-button;
+		font-size: 0.9rem;
+		line-height: 1;
+
+		&:hover {
+			background: $color__link;
+			color: #fff;
+		}
+	}
 }
 
 .sticky {
@@ -82,7 +109,7 @@
 }
 
 .hentry {
-	margin: 0 0 $base__space-unit;
+	margin: 0 0 $base__space-unit * 3;
 }
 
 .updated:not(.published){
