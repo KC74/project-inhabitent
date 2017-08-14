@@ -24,7 +24,9 @@
                 <div class="container-flex--row-nowrap">
 					<div class="site-branding">
 						<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-						<div class="inhabitent-site-logo"></div>
+						<div class="inhabitent-site-logo">
+                            <a href="<?php echo inhabitent_the_url()?>"><img src="<?php echo inhabitent_the_url()?>/wp-content/themes/inhabitent/assets/images/logos/inhabitent-logo-tent.svg"/></a>  
+                        </div>
 						<!-- <p class="site-description"><php bloginfo( 'description' ); ?></p> -->
 					</div><!-- .site-branding -->
 

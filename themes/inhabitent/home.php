@@ -23,7 +23,6 @@ get_header(); ?>
 					<?php endwhile; ?>
 		
 					<?php the_posts_navigation(); ?>
-					<?php get_template_part( 'template-parts/content', 'none' ); ?>
 		
 
         </main><!-- #main -->

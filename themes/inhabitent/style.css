@@ -458,8 +458,6 @@ textarea {
 /* ------- Logo styles ------- */
 .inhabitent-site-logo {
   position: relative;
-  background: url("../../assets/images/logos/inhabitent-logo-tent.svg") no-repeat;
-  background-size: 50px 33px;
   width: 50px;
   height: 33px;
   transform: translate(-50%, -50%);
