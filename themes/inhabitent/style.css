@@ -676,44 +676,33 @@ h2.widget-title {
   margin: 0 auto;
   padding-top: 3.5rem; }
 
-main.site-home .entry-header {
+body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .entry-header {
   position: relative; }
-  main.site-home .entry-header .entry-title, main.site-home .entry-header .entry-meta {
+  body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .entry-header img {
+    width: 100%; }
+  body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .entry-header .entry-title, body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .entry-header .entry-meta {
     position: absolute;
     background-color: #248A83;
     color: #fff;
     font-family: Novecento,sans-serif; }
-    main.site-home .entry-header .entry-title a, main.site-home .entry-header .entry-meta a {
+    body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .entry-header .entry-title a, body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .entry-header .entry-meta a {
       color: #fff;
       text-decoration: none; }
-      main.site-home .entry-header .entry-title a:hover, main.site-home .entry-header .entry-meta a:hover {
+      body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .entry-header .entry-title a:hover, body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .entry-header .entry-meta a:hover {
         color: #fff9c0; }
-
-.entry-header img {
-  width: 100%; }
-
-.entry-header .entry-title, .entry-header .entry-meta {
-  font-family: Novecento,sans-serif; }
-  .entry-header .entry-title a, .entry-header .entry-meta a {
-    color: #fff;
-    text-decoration: none; }
-    .entry-header .entry-title a:hover, .entry-header .entry-meta a:hover {
-      color: #fff9c0; }
-
-.entry-header .entry-title {
-  top: 0;
-  left: 0;
-  padding: 0.50rem 1.5rem;
-  width: 75%;
-  margin-top: 2.25rem;
-  font-size: 2.35rem;
-  line-height: 1.2; }
-
-.entry-header .entry-meta {
-  bottom: 0;
-  right: 0;
-  margin-bottom: 0.4rem;
-  padding: 0.25rem 1.5rem; }
+  body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .entry-header .entry-title {
+    top: 0;
+    left: 0;
+    padding: 0.50rem 1.5rem;
+    width: 75%;
+    margin-top: 2.25rem;
+    font-size: 2.35rem;
+    line-height: 1.2; }
+  body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .entry-header .entry-meta {
+    bottom: 0;
+    right: 0;
+    margin-bottom: 0.4rem;
+    padding: 0.25rem 1.5rem; }
 
 .entry-content p {
   line-height: 1.75;
