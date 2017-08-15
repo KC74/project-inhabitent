@@ -81,3 +81,17 @@ function inhabitent_dynamic_css() {
 	wp_add_inline_style( 'tent-style', $hero_css );
 }
 add_action( 'wp_enqueue_scripts', 'inhabitent_dynamic_css' );
+
+/**
+ * Function that limits the amount of posts per page in the archives
+ *
+ * @param [type] $query
+ * @return void
+ */
+function inhabitent_limit_archive_posts($query){
+	if ($query->is_archive) {
+		$query->set('posts_per_page', 20);
+    }
+    return $query;
+}
+add_filter('pre_get_posts', 'inhabitent_limit_archive_posts');

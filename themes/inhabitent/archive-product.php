@@ -19,15 +19,18 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+            <?php /* Start the Loop */ ?>
+            
+            <div class="product-archive-grid">
+                <?php while ( have_posts() ) : the_post(); ?>
+                    <div class="product-grid-item">
+                        <?php
+                            get_template_part( 'template-parts/product', 'archive' );
+                        ?>
+                    </div>
 
-				<?php
-					get_template_part( 'template-parts/product', 'archive' );
-				?>
-
-			<?php endwhile; ?>
-
+                <?php endwhile; ?>
+            </div>
 		<?php else : ?>
 
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
