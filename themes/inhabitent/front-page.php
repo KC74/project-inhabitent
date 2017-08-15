@@ -19,15 +19,15 @@ get_header(); ?>
                 <?php /* Start the Loop */ ?>
                     <?php
                         $args = array( 'post_type' => 'post', 'order' => 'DESC', 'posts_per_page' => 3, 'orderby' => 'date' );
-                        $product_posts = get_posts( $args ); // returns an array of posts
+                        $journal_posts = get_posts( $args ); // returns an array of posts
                     ?>
-                    <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
+                    <?php foreach ( $journal_posts as $post ) : setup_postdata( $post ); ?>
                         <div class="journal-recent-block-item">
                             <div class="journal-thumbnail-wrapper">
                                 <?php if ( has_post_thumbnail() ) : ?>
                                     <a href="<? echo get_post_permalink() ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
-                                <?php endif; ?>    
-                            </div>
+                                <?php endif; ?><!-- has_post_thumbnail -->    
+                            </div><!-- .journal-thumbnail-wrapper -->
                             <div class="entry-meta">
                                 <?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php inhabitent_posted_by(); ?>
                             </div><!-- .entry-meta -->
