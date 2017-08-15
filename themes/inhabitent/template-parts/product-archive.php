@@ -10,9 +10,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">
         <?php if ( has_post_thumbnail() ) : ?>
-            <?php the_post_thumbnail(); ?>
+          <a href="<? echo get_post_permalink() ?>"><?php the_post_thumbnail( 'large' ); ?></a>
         <?php endif; ?>
         <!-- <div class="entry-header__container"> -->
-        <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+        <?php the_title(); echo CFS()->get( 'product_price' );?>
     </header><!-- .entry-header -->
 </article><!-- #post-## -->

@@ -547,6 +547,16 @@ a {
   width: 50%; }
 
 /*--------------------------------------------------------------
+# Archives
+--------------------------------------------------------------*/
+/* ------- Product Archive ------- */
+.product-archive-grid {
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap; }
+  .product-archive-grid .product-grid-item {
+    width: 23%; }
+
+/*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
@@ -652,10 +662,10 @@ h2.widget-title {
 # Content
 --------------------------------------------------------------*/
 /* General */
-.container, .container-flex, .container-flex--row-nowrap, .site-content, .product-wrapper {
+.container, .container-flex, .product-archive-grid, .container-flex--row-nowrap, .site-content, .product-wrapper {
   width: 1120px;
   margin: 0 auto; }
-  .container-flex, .container-flex--row-nowrap, .site-content, .product-wrapper {
+  .container-flex, .product-archive-grid, .container-flex--row-nowrap, .site-content, .product-wrapper {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: justify;
@@ -664,8 +674,16 @@ h2.widget-title {
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap; }
 
+/* ------- Front Page Styles ------- */
+/* - Most Recent Journal Posts - */
+.most-recent-journals {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap; }
+
 /* ------- Content Area ------- */
-body:not(.page-template-about):not(.product-template-default):not(.post-type-archive) .content-area {
+body:not(.page-template-about):not(.product-template-default):not(.post-type-archive):not(.home) .content-area {
   padding: 3rem 5% 3rem 0;
   width: 73%;
   border-right: 1px solid #e1e1e1; }
@@ -875,9 +893,9 @@ object {
     width: 100vw;
     padding: 1.5rem 0;
     font-family: 'Novecento'; }
-    .site-footer .footer__copyright .container, .site-footer .footer__copyright .container-flex, .site-footer .footer__copyright .container-flex--row-nowrap, .site-footer .footer__copyright .site-content, .site-footer .footer__copyright .product-wrapper {
+    .site-footer .footer__copyright .container, .site-footer .footer__copyright .container-flex, .site-footer .footer__copyright .product-archive-grid, .site-footer .footer__copyright .container-flex--row-nowrap, .site-footer .footer__copyright .site-content, .site-footer .footer__copyright .product-wrapper {
       text-align: center; }
-      .site-footer .footer__copyright .container p, .site-footer .footer__copyright .container-flex p, .site-footer .footer__copyright .container-flex--row-nowrap p, .site-footer .footer__copyright .site-content p, .site-footer .footer__copyright .product-wrapper p {
+      .site-footer .footer__copyright .container p, .site-footer .footer__copyright .container-flex p, .site-footer .footer__copyright .product-archive-grid p, .site-footer .footer__copyright .container-flex--row-nowrap p, .site-footer .footer__copyright .site-content p, .site-footer .footer__copyright .product-wrapper p {
         margin: 0; }
   .site-footer .footer-container {
     display: -ms-flexbox;

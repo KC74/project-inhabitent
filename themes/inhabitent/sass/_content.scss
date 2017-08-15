@@ -20,9 +20,16 @@
 		}
 	}
 }
+/* ------- Front Page Styles ------- */
+
+/* - Most Recent Journal Posts - */
+.most-recent-journals {
+	display: flex;
+	flex-flow: row nowrap;
+}
 
 /* ------- Content Area ------- */
-body:not(.page-template-about):not(.product-template-default):not(.post-type-archive) .content-area {
+body:not(.page-template-about):not(.product-template-default):not(.post-type-archive):not(.home) .content-area {
 	padding: 3rem 5% 3rem 0;
 	width: 73%;
 	border-right: 1px solid $color__background-hr; 

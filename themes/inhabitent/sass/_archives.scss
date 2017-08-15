@@ -1,0 +1,14 @@
+/*--------------------------------------------------------------
+# Archives
+--------------------------------------------------------------*/
+
+/* ------- Product Archive ------- */
+
+.product-archive-grid {
+    @extend .container-flex;
+    flex-flow: row wrap;
+    
+    .product-grid-item {
+        width: 23%;
+    }
+}
