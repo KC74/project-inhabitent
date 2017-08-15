@@ -34,18 +34,37 @@ body:not(.page-template-about):note(.product-template-page) .content-area {
 	@extend .container-flex;
 	width: $content__size-width;
 	margin: 0 auto;
-	padding-top: 3.5rem;
+	padding-top: $base__space-unit * 3;
 }
 
 .product-wrapper {
 	@extend .container-flex;
+	margin-top: $base__space-unit * 2; 
 
 	.product-picture {
 		width: 50%;
+		margin-right: $base__space-unit * 2;
 	}
 
 	.entry-content {
 		width: 50%;
+		margin: 0;
+
+		h1, .product-price {
+			font-family: 'Novecento';
+			text-transform: uppercase;
+		}
+
+		.product-price {
+			font-size: 1.8rem;
+			margin: 0.5rem 0 $base__space-unit 0;
+		}
+		
+		h1 {
+			margin: 0;
+			color: $color__footer-h1;
+			font-size: 2.4rem;
+		}
 	}
 }
 
@@ -100,20 +119,7 @@ body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-pro
 
 .entry-readmore {
 	a {
-		@extend .link-reset;
-		color: #000;
-		background: #fff;
-		border: 1px solid #000;
-		padding: 0.75rem $base__space-unit;
-		text-transform: uppercase;
-		font-family: $font__entry-button;
-		font-size: 0.9rem;
-		line-height: 1;
-
-		&:hover {
-			background: $color__link;
-			color: #fff;
-		}
+		@extend .link-button;
 	}
 }
 
