@@ -316,7 +316,7 @@ mark, ins {
 big {
   font-size: 125%; }
 
-.link-reset, .widget.widget_archive ul li a, .sidebar-contact a, .site-footer .footer-contact a, .link-button, .entry-readmore a {
+.link-reset, .widget.widget_archive ul li a, .sidebar-contact a, .site-footer .footer-contact a, .link-button, .product-wrapper .product-social-buttons button, .entry-readmore a {
   text-transform: none;
   text-decoration: none; }
 
@@ -383,7 +383,7 @@ table {
 # Forms
 --------------------------------------------------------------*/
 /* Buttons */
-button,
+button:not(input[type="social-btn"]),
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -398,13 +398,13 @@ input[type="submit"] {
   line-height: 1;
   padding: .6rem 1rem .4rem;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
-  button:hover,
+  button:not(input[type="social-btn"]):hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
     border-color: #ccc #bbb #aaa;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
-  button:active, button:focus,
+  button:not(input[type="social-btn"]):active, button:not(input[type="social-btn"]):focus,
   input[type="button"]:active,
   input[type="button"]:focus,
   input[type="reset"]:active,
@@ -665,17 +665,18 @@ h2.widget-title {
           flex-flow: row nowrap; }
 
 /* ------- Content Area ------- */
-body:not(.page-template-about):note(.product-template-page) .content-area {
+body:not(.page-template-about):not(.product-template-default):not(.post-type-archive) .content-area {
   padding: 3rem 5% 3rem 0;
   width: 73%;
   border-right: 1px solid #e1e1e1; }
 
-/* Posts and pages */
+/* ------- Posts and pages ------- */
 .site-content {
   width: 1120px;
   margin: 0 auto;
   padding-top: 4.5rem; }
 
+/* - Product Styles - */
 .product-wrapper {
   margin-top: 3rem; }
   .product-wrapper .product-picture {
@@ -694,6 +695,12 @@ body:not(.page-template-about):note(.product-template-page) .content-area {
       margin: 0;
       color: #d99054;
       font-size: 2.4rem; }
+    .product-wrapper .entry-content__p-product, .product-wrapper .entry-content p, .entry-content .product-wrapper p {
+      margin-bottom: 1rem; }
+  .product-wrapper .product-social-buttons {
+    width: 100%; }
+    .product-wrapper .product-social-buttons button i {
+      margin-right: 0.75rem; }
 
 body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header {
   position: relative; }
@@ -880,7 +887,7 @@ object {
 # Buttons
 --------------------------------------------------------------*/
 /* ------- Button for links ------- */
-.link-button, .entry-readmore a {
+.link-button, .product-wrapper .product-social-buttons button, .entry-readmore a {
   color: #000;
   background: #fff;
   border: 1px solid #000;
@@ -889,7 +896,7 @@ object {
   font-family: "Novecento";
   font-size: 0.9rem;
   line-height: 1; }
-  .link-button:hover, .entry-readmore a:hover {
+  .link-button:hover, .product-wrapper .product-social-buttons button:hover, .entry-readmore a:hover {
     background: #248A83;
     color: #fff; }
   .link-button__color-green {

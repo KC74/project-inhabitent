@@ -4,7 +4,7 @@
 
 /* Buttons */
 
-button,
+button:not(input[type="social-btn"]),
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
