@@ -22,7 +22,7 @@
 }
 
 /* ------- Content Area ------- */
-body:not(.page-template-about) .content-area {
+body:not(.page-template-about):note(.product-template-page) .content-area {
 	padding: 3rem 5% 3rem 0;
 	width: 73%;
 	border-right: 1px solid $color__background-hr;
@@ -37,6 +37,17 @@ body:not(.page-template-about) .content-area {
 	padding-top: 3.5rem;
 }
 
+.product-wrapper {
+	@extend .container-flex;
+
+	.product-picture {
+		width: 50%;
+	}
+
+	.entry-content {
+		width: 50%;
+	}
+}
 
 body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header {
 	position: relative;
