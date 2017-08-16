@@ -22,11 +22,51 @@
 }
 /* ------- Front Page Styles ------- */
 
+/* - Hero Banner - */
+.front-page-hero {
+	background: url("//localhost:3000/inhabitent/wp-content/themes/inhabitent/assets/images/home-hero.jpg") no-repeat center;
+	background-size: cover;
+	width: 100vw;
+	height: 100vh;
+}
+
+/* - Shop Stuff Catagories - */
+.product-shop-stuff {
+	@extend .container-flex;
+
+	.product-block-item {
+		@extend .container-flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		text-align: center;
+		justify-content: space-between;
+		padding: $base__space-unit / 2;
+		width: 23.5%;
+		border: 1px solid $color__background-hr;
+		border-top-width: 5px;
+		margin: 0;
+
+		&:hover {
+			border-color: $color__footer-h1;
+		}
+
+		a {
+			@extend .link-button__color-green;
+			margin: $base__space-unit / 2;
+		}
+
+		p {
+			line-height: 1.75rem;
+		}
+	}
+}
+
 /* - Most Recent Journal Posts - */
 .most-recent-journals {
 	display: flex;
 	flex-flow: row nowrap;
 }
+
 
 /* ------- Content Area ------- */
 body:not(.page-template-about):not(.product-template-default):not(.post-type-archive):not(.home) .content-area {

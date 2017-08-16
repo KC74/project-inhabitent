@@ -5,10 +5,9 @@
  * @package Inhabitent_Starter_Theme
  */
 get_header(); ?>
-
+<div class="front-page-hero"></div>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
-
             <div class="container">
                 <h1>Shop Stuff</h1>
                 <div class="product-shop-stuff">
@@ -20,7 +19,7 @@ get_header(); ?>
                     <?php foreach ($terms as $term): ; ?>
                         <div class="product-block-item">
                             <img src="../inhabitent/wp-content/themes/inhabitent/assets/images/product-type-icons/<?echo $term->slug?>.svg"/>
-                            <p> <? echo $term->description; ?></p>
+                            <p><? echo $term->description; ?></p>
                             <a href="#"> <?php echo $term->name; ?> Stuff</a>
                         </div>
                     <?php endforeach; ?>

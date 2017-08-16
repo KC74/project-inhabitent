@@ -316,7 +316,7 @@ mark, ins {
 big {
   font-size: 125%; }
 
-.link-reset, .widget.widget_archive ul li a, .sidebar-contact a, .site-footer .footer-contact a, .link-button, .product-wrapper .product-social-buttons button, .entry-readmore a {
+.link-reset, .widget.widget_archive ul li a, .sidebar-contact a, .site-footer .footer-contact a, .link-button, .product-wrapper .product-social-buttons button, .entry-readmore a, .link-button__color-green, .product-shop-stuff .product-block-item a {
   text-transform: none;
   text-decoration: none; }
 
@@ -662,10 +662,10 @@ h2.widget-title {
 # Content
 --------------------------------------------------------------*/
 /* General */
-.container, .container-flex, .product-archive-grid, .container-flex--row-nowrap, .site-content, .product-wrapper {
+.container, .container-flex, .product-archive-grid, .container-flex--row-nowrap, .product-shop-stuff, .product-shop-stuff .product-block-item, .site-content, .product-wrapper {
   width: 1120px;
   margin: 0 auto; }
-  .container-flex, .product-archive-grid, .container-flex--row-nowrap, .site-content, .product-wrapper {
+  .container-flex, .product-archive-grid, .container-flex--row-nowrap, .product-shop-stuff, .product-shop-stuff .product-block-item, .site-content, .product-wrapper {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: justify;
@@ -675,6 +675,34 @@ h2.widget-title {
           flex-flow: row nowrap; }
 
 /* ------- Front Page Styles ------- */
+/* - Hero Banner - */
+.front-page-hero {
+  background: url("//localhost:3000/inhabitent/wp-content/themes/inhabitent/assets/images/home-hero.jpg") no-repeat center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh; }
+
+/* - Shop Stuff Catagories - */
+.product-shop-stuff .product-block-item {
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  -ms-flex-align: center;
+      align-items: center;
+  text-align: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 0.75rem;
+  width: 23.5%;
+  border: 1px solid #e1e1e1;
+  border-top-width: 5px;
+  margin: 0; }
+  .product-shop-stuff .product-block-item:hover {
+    border-color: #d99054; }
+  .product-shop-stuff .product-block-item a {
+    margin: 0.75rem; }
+  .product-shop-stuff .product-block-item p {
+    line-height: 1.75rem; }
+
 /* - Most Recent Journal Posts - */
 .most-recent-journals {
   display: -ms-flexbox;
@@ -797,6 +825,11 @@ body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-pro
   margin-top: 0;
   padding: 0; }
 
+/* ------- Front Page Media Styles ------- */
+.product-shop-stuff .product-block-item img {
+  width: 70px;
+  height: 70px; }
+
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
@@ -890,12 +923,11 @@ object {
         .site-footer .site-info .footer__logo .footer__logo-container img {
           width: 50%; }
   .site-footer .footer__copyright {
-    width: 100vw;
     padding: 1.5rem 0;
     font-family: 'Novecento'; }
-    .site-footer .footer__copyright .container, .site-footer .footer__copyright .container-flex, .site-footer .footer__copyright .product-archive-grid, .site-footer .footer__copyright .container-flex--row-nowrap, .site-footer .footer__copyright .site-content, .site-footer .footer__copyright .product-wrapper {
+    .site-footer .footer__copyright .container, .site-footer .footer__copyright .container-flex, .site-footer .footer__copyright .product-archive-grid, .site-footer .footer__copyright .container-flex--row-nowrap, .site-footer .footer__copyright .product-shop-stuff, .site-footer .footer__copyright .product-shop-stuff .product-block-item, .product-shop-stuff .site-footer .footer__copyright .product-block-item, .site-footer .footer__copyright .site-content, .site-footer .footer__copyright .product-wrapper {
       text-align: center; }
-      .site-footer .footer__copyright .container p, .site-footer .footer__copyright .container-flex p, .site-footer .footer__copyright .product-archive-grid p, .site-footer .footer__copyright .container-flex--row-nowrap p, .site-footer .footer__copyright .site-content p, .site-footer .footer__copyright .product-wrapper p {
+      .site-footer .footer__copyright .container p, .site-footer .footer__copyright .container-flex p, .site-footer .footer__copyright .product-archive-grid p, .site-footer .footer__copyright .container-flex--row-nowrap p, .site-footer .footer__copyright .product-shop-stuff p, .product-shop-stuff .site-footer .footer__copyright .product-block-item p, .site-footer .footer__copyright .site-content p, .site-footer .footer__copyright .product-wrapper p {
         margin: 0; }
   .site-footer .footer-container {
     display: -ms-flexbox;
@@ -905,7 +937,7 @@ object {
 # Buttons
 --------------------------------------------------------------*/
 /* ------- Button for links ------- */
-.link-button, .product-wrapper .product-social-buttons button, .entry-readmore a {
+.link-button, .product-wrapper .product-social-buttons button, .entry-readmore a, .link-button__color-green, .product-shop-stuff .product-block-item a {
   color: #000;
   background: #fff;
   border: 1px solid #000;
@@ -914,9 +946,11 @@ object {
   font-family: "Novecento";
   font-size: 0.9rem;
   line-height: 1; }
-  .link-button:hover, .product-wrapper .product-social-buttons button:hover, .entry-readmore a:hover {
+  .link-button:hover, .product-wrapper .product-social-buttons button:hover, .entry-readmore a:hover, .link-button__color-green:hover, .product-shop-stuff .product-block-item a:hover {
     background: #248A83;
     color: #fff; }
-  .link-button__color-green {
+  .link-button__color-green, .product-shop-stuff .product-block-item a {
     background: #248A83;
     color: #fff; }
+    .link-button__color-green:hover, .product-shop-stuff .product-block-item a:hover {
+      background: #19625D; }

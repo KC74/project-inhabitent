@@ -20,7 +20,12 @@
     }
 
     &__color-green {
+        @extend .link-button;
         background: $color__link;
         color: #fff;
+
+        &:hover {
+            background: $color__button-green-hover;
+        }
     }
 }
