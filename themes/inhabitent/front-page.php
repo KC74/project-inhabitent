@@ -8,37 +8,58 @@ get_header(); ?>
 
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
-		
-            <?php if ( is_home() && ! is_front_page() ) : ?>
-                <header>
-                    <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-                </header>
-            <?php endif; ?>
 
-            <div class="most-recent-journals">
-                <?php /* Start the Loop */ ?>
-                    <?php
-                        $args = array( 'post_type' => 'post', 'order' => 'DESC', 'posts_per_page' => 3, 'orderby' => 'date' );
-                        $journal_posts = get_posts( $args ); // returns an array of posts
+            <div class="container">
+                <h1>Shop Stuff</h1>
+                <div class="product-shop-stuff">
+                    <?php 
+                        $args = array( 'post_type' => 'product' );
+                        $terms = get_terms( $args );
                     ?>
-                    <?php foreach ( $journal_posts as $post ) : setup_postdata( $post ); ?>
-                        <div class="journal-recent-block-item">
-                            <div class="journal-thumbnail-wrapper">
-                                <?php if ( has_post_thumbnail() ) : ?>
-                                    <a href="<? echo get_post_permalink() ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
-                                <?php endif; ?><!-- has_post_thumbnail -->    
-                            </div><!-- .journal-thumbnail-wrapper -->
-                            <div class="entry-meta">
-                                <?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php inhabitent_posted_by(); ?>
-                            </div><!-- .entry-meta -->
-                            <?php the_title(); ?>
-                        </div><!-- .journal-recent-block-item -->
-                            
 
-                <?php endforeach; wp_reset_postdata(); ?>
-            </div><!-- .most-recent-journals -->
+                    <?php foreach ($terms as $term): ; ?>
+                        <div class="product-block-item">
+                            <img src="../inhabitent/wp-content/themes/inhabitent/assets/images/product-type-icons/<?echo $term->slug?>.svg"/>
+                            <p> <? echo $term->description; ?></p>
+                            <a href="#"> <?php echo $term->name; ?> Stuff</a>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+            <!-- START OF RECENT JOURNAL POSTS -->
+            <div class="container">
+                <h1>Inhabitent Journal</h1>
+                <div class="most-recent-journals">
+                    <?php /* Start the Loop */ ?>
+                        <?php
+                            $args = array( 'post_type' => 'post', 'order' => 'DESC', 'posts_per_page' => 3, 'orderby' => 'date' );
+                            $journal_posts = get_posts( $args ); // returns an array of posts
+                        ?>
+                        <?php foreach ( $journal_posts as $post ) : setup_postdata( $post ); ?>
+                            <div class="journal-recent-block-item">
+                                <div class="journal-thumbnail-wrapper">
+                                    <?php if ( has_post_thumbnail() ) : ?>
+                                        <?php the_post_thumbnail( 'medium' ); ?></a>
+                                    <?php endif; ?><!-- has_post_thumbnail -->    
+                                
+                                </div><!-- .journal-thumbnail-wrapper -->
+                                <div class="entry-meta">
+                                    <?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php inhabitent_posted_by(); ?>
+                                </div><!-- .entry-meta -->
+                                
+                                <a href="<? echo get_post_permalink() ?>"><?php the_title(); ?></a>
+                                
+                                <div class="entry-readmore">
+                                    <a href="<?echo get_post_permalink()?>">Read Entry</a>
+                                </div><!-- .entry-readmore -->
+                            </div><!-- .journal-recent-block-item -->
+
+                        <?php endforeach; wp_reset_postdata(); ?>
+                </div><!-- .most-recent-journals -->
+            </div><!-- .container -->
 
 
         </main><!-- #main -->
-	</div><!-- #primary -->
+    </div><!-- #primary -->
+    
 <?php get_footer(); ?>
