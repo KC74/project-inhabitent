@@ -453,6 +453,8 @@ textarea {
   position: fixed;
   background: rgba(255, 255, 255, 0.85);
   z-index: 999; }
+  .site-header .container-flex--row-nowrap {
+    margin: 0 auto; }
 
 /* ------- Branding Styles ------- */
 /* ------- Logo styles ------- */
@@ -679,10 +681,23 @@ h2.widget-title {
 .front-page-hero {
   background: url("//localhost:3000/inhabitent/wp-content/themes/inhabitent/assets/images/home-hero.jpg") no-repeat center;
   background-size: cover;
-  width: 100vw;
-  height: 100vh; }
+  width: 100%;
+  height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
 
 /* - Shop Stuff Catagories - */
+body.home.page-template-default .container h2, body.home.page-template-default .container-flex h2, body.home.page-template-default .product-archive-grid h2, body.home.page-template-default .container-flex--row-nowrap h2, body.home.page-template-default .product-shop-stuff h2, .product-shop-stuff body.home.page-template-default .product-block-item h2, body.home.page-template-default .site-content h2, body.home.page-template-default .product-wrapper h2 {
+  font-family: 'Novecento';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: normal; }
+
 .product-shop-stuff .product-block-item {
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap;
@@ -710,6 +725,19 @@ h2.widget-title {
   -ms-flex-flow: row nowrap;
       flex-flow: row nowrap; }
 
+/* ------- About Us Page Styles ------- */
+.page-template-about .entry-header.custom-hero h1.entry-title {
+  margin-top: 0;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Novecento';
+  font-size: 3.3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+
 /* ------- Content Area ------- */
 body:not(.page-template-about):not(.product-template-default):not(.post-type-archive):not(.home) .content-area {
   padding: 3rem 5% 3rem 0;
@@ -719,8 +747,15 @@ body:not(.page-template-about):not(.product-template-default):not(.post-type-arc
 /* ------- Posts and pages ------- */
 .site-content {
   width: 1120px;
-  margin: 0 auto;
   padding-top: 4.5rem; }
+
+body.home.page-template-default .site-content,
+body.home.page-template-default .site-content .content-area,
+body.page-template-about .site-content,
+body.page-template-about .site-content .content-area {
+  width: 100%;
+  margin: 0;
+  padding: 0; }
 
 /* - Product Styles - */
 .product-wrapper {

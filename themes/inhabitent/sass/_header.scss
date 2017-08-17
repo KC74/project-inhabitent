@@ -8,6 +8,10 @@
     position: fixed;
     background: hsla(0,0%,100%,.85);
     z-index: 999;
+
+    .container-flex--row-nowrap {
+        margin: 0 auto;
+    }
 }
 
 

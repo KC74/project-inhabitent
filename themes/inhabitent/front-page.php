@@ -5,11 +5,13 @@
  * @package Inhabitent_Starter_Theme
  */
 get_header(); ?>
-<div class="front-page-hero"></div>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
+            <section class="front-page-hero">
+                <img src="<?php echo get_site_url(); ?>/wp-content/themes/inhabitent/assets/images/logos/inhabitent-logo-full.svg"/>
+            </section>
             <div class="container">
-                <h1>Shop Stuff</h1>
+                <h2>Shop Stuff</h2>
                 <div class="product-shop-stuff">
                     <?php 
                         $args = array( 'post_type' => 'product' );
@@ -18,7 +20,7 @@ get_header(); ?>
 
                     <?php foreach ($terms as $term): ; ?>
                         <div class="product-block-item">
-                            <img src="../inhabitent/wp-content/themes/inhabitent/assets/images/product-type-icons/<?echo $term->slug?>.svg"/>
+                            <img src="<?php echo get_site_url(); ?>/wp-content/themes/inhabitent/assets/images/product-type-icons/<?echo $term->slug?>.svg"/>
                             <p><? echo $term->description; ?></p>
                             <a href="#"> <?php echo $term->name; ?> Stuff</a>
                         </div>
@@ -27,7 +29,7 @@ get_header(); ?>
             </div>
             <!-- START OF RECENT JOURNAL POSTS -->
             <div class="container">
-                <h1>Inhabitent Journal</h1>
+                <h2>Inhabitent Journal</h2>
                 <div class="most-recent-journals">
                     <?php /* Start the Loop */ ?>
                         <?php
