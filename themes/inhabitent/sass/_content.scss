@@ -85,15 +85,27 @@ body.home.page-template-default {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
+
+	.entry-readmore {
+		a {
+			margin: 4rem;
+		}
+	}
 }
 
 .journal-recent-block-item {
 	display: flex;
 	flex-flow: column nowrap;
+	width: 32.5%;
+	border: 1px solid #d1d1d1;
 
 	img {	
 		// max-width: none;
-		max-height: 250px;
+		height: 250px;
+	}
+
+	.entry-wrapper {
+		padding: 5px;
 	}
 }
 

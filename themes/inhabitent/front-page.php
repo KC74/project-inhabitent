@@ -43,16 +43,18 @@ get_header(); ?>
                                         <?php the_post_thumbnail( 'large' ); ?></a>
                                     <?php endif; ?><!-- has_post_thumbnail -->         
                                 </div><!-- .journal-thumbnail-wrapper -->
-                                <div class="entry-meta">
-                                    <?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php inhabitent_posted_by(); ?>
-                                </div><!-- .entry-meta -->
-                                
-                                <a href="<? echo get_post_permalink() ?>"><?php the_title(); ?></a>
-                                
-                                <div class="entry-readmore">
-                                    <a href="<?echo get_post_permalink()?>">Read Entry</a>
-                                </div><!-- .entry-readmore -->
-                            </div><!-- .journal-recent-block-item -->
+                                <div class="entry-wrapper">
+                                    <div class="entry-meta">
+                                        <?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php inhabitent_posted_by(); ?>
+                                    </div><!-- .entry-meta -->
+                                    
+                                    <a href="<? echo get_post_permalink() ?>"><?php the_title(); ?></a>
+                                    
+                                    <div class="entry-readmore">
+                                        <a href="<?echo get_post_permalink()?>">Read Entry</a>
+                                    </div><!-- .entry-readmore -->
+                                </div><!-- .journal-recent-block-item -->
+                            </div><!-- .entry-wrapper -->
 
                         <?php endforeach; wp_reset_postdata(); ?>
                 </div><!-- .most-recent-journals -->

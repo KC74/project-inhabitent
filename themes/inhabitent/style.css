@@ -320,6 +320,9 @@ big {
   text-transform: none;
   text-decoration: none; }
 
+.tent-business-hours-class .day-of-week {
+  font-weight: bold; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -730,14 +733,20 @@ body.home.page-template-default .container h2, body.home.page-template-default .
       flex-flow: row nowrap;
   -ms-flex-pack: justify;
       justify-content: space-between; }
+  .most-recent-journals .entry-readmore a {
+    margin: 4rem; }
 
 .journal-recent-block-item {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column nowrap;
-      flex-flow: column nowrap; }
+      flex-flow: column nowrap;
+  width: 32.5%;
+  border: 1px solid #d1d1d1; }
   .journal-recent-block-item img {
-    max-height: 250px; }
+    height: 250px; }
+  .journal-recent-block-item .entry-wrapper {
+    padding: 5px; }
 
 /* ------- About Us Page Styles ------- */
 .page-template-about .entry-header.custom-hero h1.entry-title {
