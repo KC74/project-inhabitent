@@ -114,4 +114,67 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/extras.php';
 
+// In your functions.php file
+// function red_scripts() {
+// 	wp_enqueue_script( 'jquery' );
+// 	wp_enqueue_script( 'red_api', get_template_directory_uri() . '/build/js/api.min.js', array( 'jquery' ), false, true );
+// 	 wp_localize_script( 'red_api', 'api_vars', array(
+// 	   'nonce' => wp_create_nonce( 'wp_rest' ),
+// 	   'success' => 'Thanks, your submission was received!',
+// 	   'failure' => 'Your submission could not be processed.',
+// 	 ) );
+//  }
+//  add_action( 'wp_enqueue_scripts', 'red_scripts' );
+
+/**
+ * Undocumented function
+ *
+ * @return void
+ */
+ function red_scripts() {
+	$script_url = get_template_directory_uri() . '/build/js/api.min.js';
+	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'red_comments', $script_url, array( 'jquery' ), false, true );
+   	wp_localize_script( 'red_comments', 'red_vars', array(
+	   'ajax_url' => admin_url( 'admin-ajax.php' ),
+	   'comment_nonce' => wp_create_nonce( 'red_comment_status' ),
+	   'post_id' => get_the_ID()
+   ) );
+ }
+ add_action( 'wp_enqueue_scripts', 'red_scripts' );
+
+ /**
+  * Undocumented function
+  *
+  * @return void
+  */
+$isClosed = false;
+
+ function red_comment_ajax() {
+	check_ajax_referer( 'red_comment_status', 'security' );
+	if ( ! current_user_can( 'edit_posts' ) ) {
+	   exit;
+	}
+	$id = $_POST['the_post_id'];
+	if ( isset( $id ) && is_numeric( $id ) ) {
+		if (!$GLOBALS['isClosed']) {
+			$the_post = array(
+				'ID' => $id,
+				'comment_status' => 'open'
+			);
+			$GLOBALS['isClosed'] = true;
+		} else {
+			$the_post = array(
+				'ID' => $id,
+				'comment_status' => 'closed'
+			);
+			$GLOBALS['isClosed'] = false;
+		}
+	   wp_update_post( $the_post );
+	}
+	exit;
+ }
+ add_action( 'wp_ajax_red_comment_ajax', 'red_comment_ajax' );
+ // add_action( 'wp_ajax_nopriv_red_comment_ajax', 'red_comment_ajax' );
+
 
