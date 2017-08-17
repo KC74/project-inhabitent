@@ -10,7 +10,7 @@ get_header(); ?>
             <section class="front-page-hero">
                 <img src="<?php echo get_site_url(); ?>/wp-content/themes/inhabitent/assets/images/logos/inhabitent-logo-full.svg"/>
             </section>
-            <div class="container">
+            <div class="product-shop container">
                 <h2>Shop Stuff</h2>
                 <div class="product-shop-stuff">
                     <?php 
@@ -28,7 +28,7 @@ get_header(); ?>
                 </div>
             </div>
             <!-- START OF RECENT JOURNAL POSTS -->
-            <div class="container">
+            <div class="recent-journals container">
                 <h2>Inhabitent Journal</h2>
                 <div class="most-recent-journals">
                     <?php /* Start the Loop */ ?>
@@ -40,9 +40,8 @@ get_header(); ?>
                             <div class="journal-recent-block-item">
                                 <div class="journal-thumbnail-wrapper">
                                     <?php if ( has_post_thumbnail() ) : ?>
-                                        <?php the_post_thumbnail( 'medium' ); ?></a>
-                                    <?php endif; ?><!-- has_post_thumbnail -->    
-                                
+                                        <?php the_post_thumbnail( 'large' ); ?></a>
+                                    <?php endif; ?><!-- has_post_thumbnail -->         
                                 </div><!-- .journal-thumbnail-wrapper -->
                                 <div class="entry-meta">
                                     <?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php inhabitent_posted_by(); ?>

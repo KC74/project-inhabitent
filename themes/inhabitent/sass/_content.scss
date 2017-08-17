@@ -22,6 +22,10 @@
 }
 /* ------- Front Page Styles ------- */
 
+.product-shop.container, .recent-journals.container {
+	margin-bottom: 4.5rem;
+}
+
 /* - Hero Banner - */
 .front-page-hero {
 	background: url("//localhost:3000/inhabitent/wp-content/themes/inhabitent/assets/images/home-hero.jpg") no-repeat center;
@@ -42,6 +46,7 @@ body.home.page-template-default {
 			text-align: center;
 			font-size: $base__space-unit * 1.5;
 			font-weight: normal;
+			letter-spacing: 4px;
 		}
 	}
 }
@@ -79,6 +84,17 @@ body.home.page-template-default {
 .most-recent-journals {
 	display: flex;
 	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
+.journal-recent-block-item {
+	display: flex;
+	flex-flow: column nowrap;
+
+	img {	
+		// max-width: none;
+		max-height: 250px;
+	}
 }
 
 /* ------- About Us Page Styles ------- */

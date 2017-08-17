@@ -677,6 +677,9 @@ h2.widget-title {
           flex-flow: row nowrap; }
 
 /* ------- Front Page Styles ------- */
+.product-shop.container, .product-shop.container-flex, .product-shop.product-archive-grid, .product-shop.container-flex--row-nowrap, .product-shop.product-shop-stuff, .product-shop-stuff .product-shop.product-block-item, .product-shop.site-content, .product-shop.product-wrapper, .recent-journals.container, .recent-journals.container-flex, .recent-journals.product-archive-grid, .recent-journals.container-flex--row-nowrap, .recent-journals.product-shop-stuff, .product-shop-stuff .recent-journals.product-block-item, .recent-journals.site-content, .recent-journals.product-wrapper {
+  margin-bottom: 4.5rem; }
+
 /* - Hero Banner - */
 .front-page-hero {
   background: url("//localhost:3000/inhabitent/wp-content/themes/inhabitent/assets/images/home-hero.jpg") no-repeat center;
@@ -696,7 +699,8 @@ body.home.page-template-default .container h2, body.home.page-template-default .
   text-transform: uppercase;
   text-align: center;
   font-size: 2.25rem;
-  font-weight: normal; }
+  font-weight: normal;
+  letter-spacing: 4px; }
 
 .product-shop-stuff .product-block-item {
   -ms-flex-flow: column nowrap;
@@ -723,7 +727,17 @@ body.home.page-template-default .container h2, body.home.page-template-default .
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: row nowrap;
-      flex-flow: row nowrap; }
+      flex-flow: row nowrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+
+.journal-recent-block-item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap; }
+  .journal-recent-block-item img {
+    max-height: 250px; }
 
 /* ------- About Us Page Styles ------- */
 .page-template-about .entry-header.custom-hero h1.entry-title {
