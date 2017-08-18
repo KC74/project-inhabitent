@@ -12,6 +12,12 @@
     .product-grid-item {
         flex-basis: 23%;
         max-width: 23%;
+        border: 1px solid #d1d1d1;
+        margin-bottom: $base__space-unit;
+
+        .hentry {
+            margin: 0;
+        }
 
         .product-thumbnail-wrapper {
             height: 250px;
@@ -33,7 +39,9 @@
             display: flex;
             justify-content: space-between;
             position: relative;
-
+            padding: $base__space-unit / 2 1rem;
+            overflow: hidden;
+            
             h2.product-title {
                 font-size: 1rem;
                 margin: 0;
@@ -41,9 +49,9 @@
             }
             
             span.product-info-separator {
-                position: absolute;
                 overflow: hidden;
-                width: 100%;
+                position: absolute;
+                width: 75%;
                 z-index: -1;
             }
             
