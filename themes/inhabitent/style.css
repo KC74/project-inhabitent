@@ -316,7 +316,7 @@ mark, ins {
 big {
   font-size: 125%; }
 
-.link-reset, .widget.widget_archive ul li a, .sidebar-contact a, .site-footer .footer-contact a, .link-button, .product-wrapper .product-social-buttons button, .entry-readmore a, .link-button__color-green, .product-shop-stuff .product-block-item a {
+.link-reset, .widget.widget_archive ul li a, .sidebar-contact a, .site-footer .footer-contact a, .entry-readmore a, .link-button, .product-wrapper .product-social-buttons button, .link-button__color-green {
   text-transform: none;
   text-decoration: none; }
 
@@ -718,35 +718,52 @@ body.home.page-template-default .container h2, body.home.page-template-default .
   border: 1px solid #e1e1e1;
   border-top-width: 5px;
   margin: 0; }
+  .product-shop-stuff .product-block-item .entry-readmore.link-button__color-green {
+    margin: 0.75rem;
+    border: none; }
+    .product-shop-stuff .product-block-item .entry-readmore.link-button__color-green a {
+      color: #fff; }
   .product-shop-stuff .product-block-item:hover {
     border-color: #d99054; }
-  .product-shop-stuff .product-block-item a {
-    margin: 0.75rem; }
   .product-shop-stuff .product-block-item p {
     line-height: 1.75rem; }
 
 /* - Most Recent Journal Posts - */
-.most-recent-journals {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: row nowrap;
-      flex-flow: row nowrap;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
-  .most-recent-journals .entry-readmore a {
-    margin: 4rem; }
-
-.journal-recent-block-item {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: column nowrap;
-      flex-flow: column nowrap;
-  width: 32.5%;
-  border: 1px solid #d1d1d1; }
-  .journal-recent-block-item img {
-    height: 250px; }
-  .journal-recent-block-item .entry-wrapper {
-    padding: 5px; }
+.recent-journals.container, .recent-journals.container-flex, .recent-journals.product-archive-grid, .recent-journals.container-flex--row-nowrap, .recent-journals.product-shop-stuff, .product-shop-stuff .recent-journals.product-block-item, .recent-journals.site-content, .recent-journals.product-wrapper {
+  width: 1120px; }
+  .recent-journals.container h3, .recent-journals.container-flex h3, .recent-journals.product-archive-grid h3, .recent-journals.container-flex--row-nowrap h3, .recent-journals.product-shop-stuff h3, .product-shop-stuff .recent-journals.product-block-item h3, .recent-journals.site-content h3, .recent-journals.product-wrapper h3 {
+    letter-spacing: 2px;
+    font-family: 'Novecento';
+    margin: 0;
+    line-height: 1.75rem; }
+    .recent-journals.container h3 a, .recent-journals.container-flex h3 a, .recent-journals.product-archive-grid h3 a, .recent-journals.container-flex--row-nowrap h3 a, .recent-journals.product-shop-stuff h3 a, .product-shop-stuff .recent-journals.product-block-item h3 a, .recent-journals.site-content h3 a, .recent-journals.product-wrapper h3 a {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      text-decoration: none; }
+  .recent-journals.container .most-recent-journals, .recent-journals.container-flex .most-recent-journals, .recent-journals.product-archive-grid .most-recent-journals, .recent-journals.container-flex--row-nowrap .most-recent-journals, .recent-journals.product-shop-stuff .most-recent-journals, .product-shop-stuff .recent-journals.product-block-item .most-recent-journals, .recent-journals.site-content .most-recent-journals, .recent-journals.product-wrapper .most-recent-journals {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+  .recent-journals.container .journal-recent-block-item, .recent-journals.container-flex .journal-recent-block-item, .recent-journals.product-archive-grid .journal-recent-block-item, .recent-journals.container-flex--row-nowrap .journal-recent-block-item, .recent-journals.product-shop-stuff .journal-recent-block-item, .product-shop-stuff .recent-journals.product-block-item .journal-recent-block-item, .recent-journals.site-content .journal-recent-block-item, .recent-journals.product-wrapper .journal-recent-block-item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+    border: 1px solid #d1d1d1;
+    width: 32.5%; }
+    .recent-journals.container .journal-recent-block-item img, .recent-journals.container-flex .journal-recent-block-item img, .recent-journals.product-archive-grid .journal-recent-block-item img, .recent-journals.container-flex--row-nowrap .journal-recent-block-item img, .recent-journals.product-shop-stuff .journal-recent-block-item img, .product-shop-stuff .recent-journals.product-block-item .journal-recent-block-item img, .recent-journals.site-content .journal-recent-block-item img, .recent-journals.product-wrapper .journal-recent-block-item img {
+      height: 250px; }
+    .recent-journals.container .journal-recent-block-item .entry-wrapper, .recent-journals.container-flex .journal-recent-block-item .entry-wrapper, .recent-journals.product-archive-grid .journal-recent-block-item .entry-wrapper, .recent-journals.container-flex--row-nowrap .journal-recent-block-item .entry-wrapper, .recent-journals.product-shop-stuff .journal-recent-block-item .entry-wrapper, .product-shop-stuff .recent-journals.product-block-item .journal-recent-block-item .entry-wrapper, .recent-journals.site-content .journal-recent-block-item .entry-wrapper, .recent-journals.product-wrapper .journal-recent-block-item .entry-wrapper {
+      height: 100%;
+      padding: 0.75rem; }
+      .recent-journals.container .journal-recent-block-item .entry-wrapper .entry-meta, .recent-journals.container-flex .journal-recent-block-item .entry-wrapper .entry-meta, .recent-journals.product-archive-grid .journal-recent-block-item .entry-wrapper .entry-meta, .recent-journals.container-flex--row-nowrap .journal-recent-block-item .entry-wrapper .entry-meta, .recent-journals.product-shop-stuff .journal-recent-block-item .entry-wrapper .entry-meta, .product-shop-stuff .recent-journals.product-block-item .journal-recent-block-item .entry-wrapper .entry-meta, .recent-journals.site-content .journal-recent-block-item .entry-wrapper .entry-meta, .recent-journals.product-wrapper .journal-recent-block-item .entry-wrapper .entry-meta {
+        font-size: 0.75rem; }
+    .recent-journals.container .journal-recent-block-item .entry-readmore, .recent-journals.container-flex .journal-recent-block-item .entry-readmore, .recent-journals.product-archive-grid .journal-recent-block-item .entry-readmore, .recent-journals.container-flex--row-nowrap .journal-recent-block-item .entry-readmore, .recent-journals.product-shop-stuff .journal-recent-block-item .entry-readmore, .product-shop-stuff .recent-journals.product-block-item .journal-recent-block-item .entry-readmore, .recent-journals.site-content .journal-recent-block-item .entry-readmore, .recent-journals.product-wrapper .journal-recent-block-item .entry-readmore {
+      width: 40%;
+      margin: 0.75rem; }
 
 /* ------- About Us Page Styles ------- */
 .page-template-about .entry-header.custom-hero h1.entry-title {
@@ -837,6 +854,11 @@ body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-pro
 .entry-content p {
   line-height: 1.75;
   font-family: "Merriweather"; }
+
+.entry-readmore {
+  text-align: center; }
+  .entry-readmore a {
+    text-transform: uppercase; }
 
 .sticky {
   display: block; }
@@ -995,8 +1017,7 @@ object {
 # Buttons
 --------------------------------------------------------------*/
 /* ------- Button for links ------- */
-.link-button, .product-wrapper .product-social-buttons button, .entry-readmore a, .link-button__color-green, .product-shop-stuff .product-block-item a {
-  color: #000;
+.link-button, .product-wrapper .product-social-buttons button, .link-button__color-green {
   background: #fff;
   border: 1px solid #000;
   padding: 0.75rem 1.5rem;
@@ -1004,11 +1025,12 @@ object {
   font-family: "Novecento";
   font-size: 0.9rem;
   line-height: 1; }
-  .link-button:hover, .product-wrapper .product-social-buttons button:hover, .entry-readmore a:hover, .link-button__color-green:hover, .product-shop-stuff .product-block-item a:hover {
+  .link-button:hover, .product-wrapper .product-social-buttons button:hover, .link-button__color-green:hover {
+    background: #248A83; }
+    .link-button:hover a, .product-wrapper .product-social-buttons button:hover a, .link-button__color-green:hover a {
+      color: #fff; }
+  .link-button__color-green {
     background: #248A83;
     color: #fff; }
-  .link-button__color-green, .product-shop-stuff .product-block-item a {
-    background: #248A83;
-    color: #fff; }
-    .link-button__color-green:hover, .product-shop-stuff .product-block-item a:hover {
+    .link-button__color-green:hover {
       background: #19625D; }

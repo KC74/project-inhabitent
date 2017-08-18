@@ -65,13 +65,17 @@ body.home.page-template-default {
 		border-top-width: 5px;
 		margin: 0;
 
-		&:hover {
-			border-color: $color__footer-h1;
+		.entry-readmore.link-button__color-green	{
+			margin: $base__space-unit / 2;
+			border: none;
+
+			a {
+				color: #fff;
+			}
 		}
 
-		a {
-			@extend .link-button__color-green;
-			margin: $base__space-unit / 2;
+		&:hover {
+			border-color: $color__footer-h1;
 		}
 
 		p {
@@ -81,31 +85,51 @@ body.home.page-template-default {
 }
 
 /* - Most Recent Journal Posts - */
-.most-recent-journals {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-between;
+.recent-journals.container {
+	width: 1120px;
+	
+	h3 {
+		letter-spacing: 2px;
+		font-family: 'Novecento';
+		margin: 0;
+		line-height: 1.75rem;
 
-	.entry-readmore {
 		a {
-			margin: 4rem;
+			font-size: 1.3rem;
+			text-transform: uppercase;
+			text-decoration: none;
 		}
 	}
-}
 
-.journal-recent-block-item {
-	display: flex;
-	flex-flow: column nowrap;
-	width: 32.5%;
-	border: 1px solid #d1d1d1;
-
-	img {	
-		// max-width: none;
-		height: 250px;
+	.most-recent-journals {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
 	}
 
-	.entry-wrapper {
-		padding: 5px;
+	.journal-recent-block-item {
+		display: flex;
+		flex-flow: column nowrap;
+		border: 1px solid #d1d1d1;
+		width: 32.5%;
+
+		img {
+			height: 250px;
+		}
+
+		.entry-wrapper {
+			height: 100%;
+			padding: 0.75rem;
+
+			.entry-meta {
+				font-size: $base__space-unit / 2;
+			}
+		}
+
+		.entry-readmore {
+			width: 40%;
+			margin: 0.75rem;
+		}
 	}
 }
 
@@ -251,8 +275,10 @@ body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-pro
 }
 
 .entry-readmore {
+	text-align: center;
 	a {
-		@extend .link-button;
+		@extend .link-reset;
+		text-transform: uppercase;
 	}
 }
 

@@ -22,7 +22,9 @@ get_header(); ?>
                         <div class="product-block-item">
                             <img src="<?php echo get_site_url(); ?>/wp-content/themes/inhabitent/assets/images/product-type-icons/<?echo $term->slug?>.svg"/>
                             <p><? echo $term->description; ?></p>
-                            <a href="#"> <?php echo $term->name; ?> Stuff</a>
+                            <div class="entry-readmore link-button__color-green">
+                                <a href="#"> <?php echo $term->name; ?> Stuff</a>
+                            </div>
                         </div>
                     <?php endforeach; ?>
                 </div>
@@ -48,13 +50,13 @@ get_header(); ?>
                                         <?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php inhabitent_posted_by(); ?>
                                     </div><!-- .entry-meta -->
                                     
-                                    <a href="<? echo get_post_permalink() ?>"><?php the_title(); ?></a>
+                                    <h3><a class="journal-title" href="<? echo get_post_permalink() ?>"><?php the_title(); ?></a></h3>
                                     
-                                    <div class="entry-readmore">
-                                        <a href="<?echo get_post_permalink()?>">Read Entry</a>
-                                    </div><!-- .entry-readmore -->
-                                </div><!-- .journal-recent-block-item -->
-                            </div><!-- .entry-wrapper -->
+                                </div><!-- .entry-wrapper -->
+                                <div class="entry-readmore link-button">
+                                    <a href="<?echo get_post_permalink()?>">Read Entry</a>
+                                </div><!-- .entry-readmore -->
+                            </div><!-- .journal-recent-block-item -->
 
                         <?php endforeach; wp_reset_postdata(); ?>
                 </div><!-- .most-recent-journals -->
