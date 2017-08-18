@@ -115,6 +115,7 @@ body.home.page-template-default {
 
 		img {
 			height: 250px;
+			border-bottom: 5px solid #d1d1d1;
 		}
 
 		.entry-wrapper {
@@ -148,6 +149,46 @@ body.home.page-template-default {
 			text-transform: uppercase;
 			letter-spacing: 2px;
 		}
+	}
+
+	.entry-content {
+		max-width: 800px;
+		margin: $base__space-unit * 3 auto;
+		line-height: 1.75rem;
+
+		h2 {
+			text-align: center;
+			font-size: 2.1rem;
+			font-family: 'Novecento';
+		}
+	}
+}
+
+/* ------- Journal Page Styles ------- */
+body.blog {
+
+	.entry-readmore.link-button {
+		width: 170px;
+	}
+}
+
+/* ------- Find Us Page Styles ------- */
+body.page-template-default {
+	h1, h2 {
+		font-family: 'Novecento';
+		text-transform: uppercase;
+		line-height: 1.25;
+	}
+
+	h1 {
+		font-size: 2.4rem;
+	}
+
+	h2 {
+		font-size: 1.75rem;
+	}
+	.entry-readmore.link-button {
+		width: 170px;
 	}
 }
 

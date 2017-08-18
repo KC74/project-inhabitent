@@ -7,8 +7,51 @@
 .product-archive-grid {
     @extend .container-flex;
     flex-flow: row wrap;
+    justify-content: space-between;
     
     .product-grid-item {
-        width: 23%;
+        flex-basis: 23%;
+        max-width: 23%;
+
+        .product-thumbnail-wrapper {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+
+            img {
+                max-height: 250px;
+                max-width: none;
+                width: auto;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+                position: absolute;
+            }
+        }
+
+        .product-info {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+
+            h2.product-title {
+                font-size: 1rem;
+                margin: 0;
+                font-weight: 400;
+            }
+            
+            span.product-info-separator {
+                position: absolute;
+                overflow: hidden;
+                width: 100%;
+                z-index: -1;
+            }
+            
+            span.product-price, h2.product-title {
+                background-color: #fff;
+                text-transform: none;
+                text-decoration: none;
+            }
+        }
     }
 }

@@ -557,9 +557,44 @@ a {
 /* ------- Product Archive ------- */
 .product-archive-grid {
   -ms-flex-flow: row wrap;
-      flex-flow: row wrap; }
+      flex-flow: row wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
   .product-archive-grid .product-grid-item {
-    width: 23%; }
+    -ms-flex-preferred-size: 23%;
+        flex-basis: 23%;
+    max-width: 23%; }
+    .product-archive-grid .product-grid-item .product-thumbnail-wrapper {
+      height: 250px;
+      overflow: hidden;
+      position: relative; }
+      .product-archive-grid .product-grid-item .product-thumbnail-wrapper img {
+        max-height: 250px;
+        max-width: none;
+        width: auto;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        position: absolute; }
+    .product-archive-grid .product-grid-item .product-info {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+      position: relative; }
+      .product-archive-grid .product-grid-item .product-info h2.product-title {
+        font-size: 1rem;
+        margin: 0;
+        font-weight: 400; }
+      .product-archive-grid .product-grid-item .product-info span.product-info-separator {
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        z-index: -1; }
+      .product-archive-grid .product-grid-item .product-info span.product-price, .product-archive-grid .product-grid-item .product-info h2.product-title {
+        background-color: #fff;
+        text-transform: none;
+        text-decoration: none; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -755,7 +790,8 @@ body.home.page-template-default .container h2, body.home.page-template-default .
     border: 1px solid #d1d1d1;
     width: 32.5%; }
     .recent-journals.container .journal-recent-block-item img, .recent-journals.container-flex .journal-recent-block-item img, .recent-journals.product-archive-grid .journal-recent-block-item img, .recent-journals.container-flex--row-nowrap .journal-recent-block-item img, .recent-journals.product-shop-stuff .journal-recent-block-item img, .product-shop-stuff .recent-journals.product-block-item .journal-recent-block-item img, .recent-journals.site-content .journal-recent-block-item img, .recent-journals.product-wrapper .journal-recent-block-item img {
-      height: 250px; }
+      height: 250px;
+      border-bottom: 5px solid #d1d1d1; }
     .recent-journals.container .journal-recent-block-item .entry-wrapper, .recent-journals.container-flex .journal-recent-block-item .entry-wrapper, .recent-journals.product-archive-grid .journal-recent-block-item .entry-wrapper, .recent-journals.container-flex--row-nowrap .journal-recent-block-item .entry-wrapper, .recent-journals.product-shop-stuff .journal-recent-block-item .entry-wrapper, .product-shop-stuff .recent-journals.product-block-item .journal-recent-block-item .entry-wrapper, .recent-journals.site-content .journal-recent-block-item .entry-wrapper, .recent-journals.product-wrapper .journal-recent-block-item .entry-wrapper {
       height: 100%;
       padding: 0.75rem; }
@@ -777,6 +813,34 @@ body.home.page-template-default .container h2, body.home.page-template-default .
   font-size: 3.3rem;
   text-transform: uppercase;
   letter-spacing: 2px; }
+
+.page-template-about .entry-content {
+  max-width: 800px;
+  margin: 4.5rem auto;
+  line-height: 1.75rem; }
+  .page-template-about .entry-content h2 {
+    text-align: center;
+    font-size: 2.1rem;
+    font-family: 'Novecento'; }
+
+/* ------- Journal Page Styles ------- */
+body.blog .entry-readmore.link-button, body.blog .product-wrapper .product-social-buttons button.entry-readmore, .product-wrapper .product-social-buttons body.blog button.entry-readmore, body.blog .entry-readmore.link-button__color-green {
+  width: 170px; }
+
+/* ------- Find Us Page Styles ------- */
+body.page-template-default h1, body.page-template-default h2 {
+  font-family: 'Novecento';
+  text-transform: uppercase;
+  line-height: 1.25; }
+
+body.page-template-default h1 {
+  font-size: 2.4rem; }
+
+body.page-template-default h2 {
+  font-size: 1.75rem; }
+
+body.page-template-default .entry-readmore.link-button, body.page-template-default .product-wrapper .product-social-buttons button.entry-readmore, .product-wrapper .product-social-buttons body.page-template-default button.entry-readmore, body.page-template-default .entry-readmore.link-button__color-green {
+  width: 170px; }
 
 /* ------- Content Area ------- */
 body:not(.page-template-about):not(.product-template-default):not(.post-type-archive):not(.home) .content-area {
