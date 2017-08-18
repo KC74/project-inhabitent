@@ -316,7 +316,7 @@ mark, ins {
 big {
   font-size: 125%; }
 
-.link-reset, .widget.widget_archive ul li a, .sidebar-contact a, .site-footer .footer-contact a, .entry-readmore a, .link-button, .product-wrapper .product-social-buttons button, .link-button__color-green {
+.link-reset, body.archive.post-type-archive.post-type-archive-product .page-header .product-stuff-links a, .widget.widget_archive ul li a, .sidebar-contact a, .site-footer .footer-contact a, .entry-readmore a, .link-button, .product-wrapper .product-social-buttons button, .link-button__color-green {
   text-transform: none;
   text-decoration: none; }
 
@@ -557,13 +557,26 @@ a {
 /* ------- Product Archive Header ------- */
 body.archive.post-type-archive.post-type-archive-product .page-header {
   margin-top: 2.25rem; }
+  body.archive.post-type-archive.post-type-archive-product .page-header .product-stuff-links {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    margin-bottom: 3rem;
+    border-bottom: 1px dashed #d1d1d1;
+    padding-bottom: 2.5rem; }
+    body.archive.post-type-archive.post-type-archive-product .page-header .product-stuff-links a {
+      text-transform: uppercase;
+      font-family: 'Novecento';
+      font-size: 1.2rem;
+      margin: 0 1.5rem; }
 
 body.archive.post-type-archive.post-type-archive-product h1 {
   text-transform: uppercase;
   font-family: 'Novecento';
   text-align: center;
   letter-spacing: 2px;
-  margin-bottom: 2.55rem; }
+  font-size: 2.4rem; }
 
 /* ------- Product Archive ------- */
 .site-footer {
@@ -760,7 +773,8 @@ body.home.page-template-default .container h2, body.home.page-template-default .
   text-align: center;
   font-size: 2.25rem;
   font-weight: normal;
-  letter-spacing: 4px; }
+  letter-spacing: 4px;
+  margin: 3.75rem 0; }
 
 .product-shop-stuff .product-block-item {
   -ms-flex-flow: column nowrap;

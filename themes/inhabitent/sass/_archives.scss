@@ -7,6 +7,22 @@ body.archive.post-type-archive.post-type-archive-product {
 
     .page-header {
         margin-top: $base__space-unit * 1.5;
+
+        .product-stuff-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: $base__space-unit * 2;
+            border-bottom: 1px dashed #d1d1d1;
+            padding-bottom: 2.5rem;
+
+            a {
+                @extend .link-reset;
+                text-transform: uppercase;
+                font-family: 'Novecento';
+                font-size: 1.2rem;
+                margin: 0 1.5rem;
+            }
+        }
     }
 
     h1 {
@@ -14,7 +30,8 @@ body.archive.post-type-archive.post-type-archive-product {
         font-family: 'Novecento';
         text-align: center;
         letter-spacing: 2px;
-        margin-bottom: $base__space-unit * 1.7;
+        font-size: 2.4rem;
+
 
     }
 }
