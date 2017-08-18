@@ -14,7 +14,7 @@ get_header(); ?>
                 <h2>Shop Stuff</h2>
                 <div class="product-shop-stuff">
                     <?php 
-                        $args = array( 'post_type' => 'product' );
+                        $args = array( 'post_type' => 'product-type' );
                         $terms = get_terms( $args );
                     ?>
 

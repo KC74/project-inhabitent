@@ -2,12 +2,33 @@
 # Archives
 --------------------------------------------------------------*/
 
+/* ------- Product Archive Header ------- */
+body.archive.post-type-archive.post-type-archive-product {
+
+    .page-header {
+        margin-top: $base__space-unit * 1.5;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-family: 'Novecento';
+        text-align: center;
+        letter-spacing: 2px;
+        margin-bottom: $base__space-unit * 1.7;
+
+    }
+}
 /* ------- Product Archive ------- */
+
+.site-footer {
+    margin-top: $base__space-unit * 3;
+}
 
 .product-archive-grid {
     @extend .container-flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    margin-bottom: $base__space-unit;    
     
     .product-grid-item {
         flex-basis: 23%;
@@ -32,6 +53,7 @@
                 top: 50%;
                 left: 50%;
                 position: absolute;
+                border-bottom: 5px solid #d1d1d1;
             }
         }
 

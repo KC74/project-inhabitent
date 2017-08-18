@@ -97,3 +97,13 @@ function inhabitent_limit_archive_posts($query){
     return $query;
 }
 add_filter('pre_get_posts', 'inhabitent_limit_archive_posts');
+
+
+/**
+ * Shop Stuff
+ */
+add_filter( 'get_the_archive_title', function ( $title ) {
+	
+		return $title = 'Shop Stuff';
+	
+});

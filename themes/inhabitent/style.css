@@ -554,12 +554,27 @@ a {
 /*--------------------------------------------------------------
 # Archives
 --------------------------------------------------------------*/
+/* ------- Product Archive Header ------- */
+body.archive.post-type-archive.post-type-archive-product .page-header {
+  margin-top: 2.25rem; }
+
+body.archive.post-type-archive.post-type-archive-product h1 {
+  text-transform: uppercase;
+  font-family: 'Novecento';
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 2.55rem; }
+
 /* ------- Product Archive ------- */
+.site-footer {
+  margin-top: 4.5rem; }
+
 .product-archive-grid {
   -ms-flex-flow: row wrap;
       flex-flow: row wrap;
   -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+  margin-bottom: 1.5rem; }
   .product-archive-grid .product-grid-item {
     -ms-flex-preferred-size: 23%;
         flex-basis: 23%;
@@ -579,7 +594,8 @@ a {
         transform: translate(-50%, -50%);
         top: 50%;
         left: 50%;
-        position: absolute; }
+        position: absolute;
+        border-bottom: 5px solid #d1d1d1; }
     .product-archive-grid .product-grid-item .product-info {
       display: -ms-flexbox;
       display: flex;
