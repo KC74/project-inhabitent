@@ -25,6 +25,16 @@ a {
 }
 
 /* Menus */
+.search-expanded {
+	visibility: visible !important;
+	width: 200px !important;
+	transition: width 0.5s ease-in-out;
+}
+
+.search-collapse {
+	width: 1px !important;
+	transition: width 0.5s ease-in-out;
+}
 
 .main-navigation {
 	clear: both;
@@ -33,7 +43,7 @@ a {
 	justify-content: flex-end;
 
 	form {
-		margin-left: $base__space-unit;
+		margin-left: $base__space-unit / 2.5;
 		
 		label {
 			input.search-field {
@@ -60,12 +70,6 @@ a {
 		}
 
 	}
-	
-.search-expanded {
-	visibility: visible;
-	width: 100px;
-	transition: width 2s ease-in-out;
-}
 
 	ul {
 		display: inline-block;
