@@ -23,7 +23,7 @@ get_header(); ?>
                             <img src="<?php echo get_site_url(); ?>/wp-content/themes/inhabitent/assets/images/product-type-icons/<?echo $term->slug?>.svg"/>
                             <p><? echo $term->description; ?></p>
                             <div class="entry-readmore link-button__color-green">
-                                <a href="#"> <?php echo $term->name; ?> Stuff</a>
+                                <a href="<?php echo get_site_url(); ?>/<?php echo $term->taxonomy; ?>/<?php echo $term->slug; ?>"> <?php echo $term->name; ?> Stuff</a>
                             </div>
                         </div>
                     <?php endforeach; ?>

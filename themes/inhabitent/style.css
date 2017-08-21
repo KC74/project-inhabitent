@@ -316,7 +316,7 @@ mark, ins {
 big {
   font-size: 125%; }
 
-.link-reset, body.archive .page-header .product-stuff-links a, .widget.widget_archive ul li a, .sidebar-contact a, .site-footer .footer-contact a, .entry-readmore a, .link-button, .product-wrapper .product-social-buttons button, .link-button__color-green {
+.link-reset, body.archive .page-header .product-stuff-links a, .widget.widget_archive ul li a, .sidebar-contact a, .site-footer .footer-contact a, .entry-readmore a, body.post-template-default .entry-footer a, .link-button, .product-wrapper .product-social-buttons button, .link-button__color-green {
   text-transform: none;
   text-decoration: none; }
 
@@ -1002,6 +1002,15 @@ body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-pro
 
 .bypostauthor {
   display: block; }
+
+/* Tags */
+body.post-template-default .entry-footer, body.post-template-default .entry-footer a {
+  text-transform: uppercase;
+  font-family: 'Novecento'; }
+  body.post-template-default .entry-footer .tags-links {
+    margin-left: 1rem; }
+  body.post-template-default .entry-footer a {
+    text-decoration: none; }
 
 /*--------------------------------------------------------------
 # Media

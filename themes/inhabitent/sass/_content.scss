@@ -381,3 +381,21 @@ body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-pro
 .bypostauthor {
 	display: block;
 }
+
+/* Tags */
+body.post-template-default {
+	.entry-footer {
+		text-transform: uppercase;
+		font-family: 'Novecento';
+
+		.tags-links {
+			margin-left: 1rem;
+		}
+
+		a {
+			@extend .link-reset;
+			@extend .entry-footer;
+			text-decoration: none;
+		}
+	}
+}
