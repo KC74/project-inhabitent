@@ -5,7 +5,7 @@
  *
  * Learn more: https://github.com/Automattic/Inhabitent Starter Theme/pull/136
  */
-// (function () {
+(function () {
     var searchButton = document.getElementById('search-button');
     var searchField = document.getElementById('search');
 
@@ -26,5 +26,4 @@
         }, 550);
         
    }
-
-// })();
+})();

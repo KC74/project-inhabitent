@@ -30,4 +30,5 @@ themes/*
 !themes/inhabitent/
 # Ignore packages #
 themes/inhabitent/node_modules/
+assets/
 

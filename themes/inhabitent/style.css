@@ -224,37 +224,37 @@ th {
 --------------------------------------------------------------*/
 @font-face {
   font-family: 'Merriweather';
-  src: url("../../assets/fonts/merriweather-bold-webfont.woff2") format("woff2"), url("../../assets/fonts/merriweather-bold-webfont.woff") format("woff"), url("../../assets/fonts/merriweather-bold-webfont.ttf") format("truetype");
+  src: url("../../fonts/merriweather-bold-webfont.woff2") format("woff2"), url("../../fonts/merriweather-bold-webfont.woff") format("woff"), url("../../fonts/merriweather-bold-webfont.ttf") format("truetype");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'Merriweather';
-  src: url("../../assets/fonts/merriweather-bolditalic-webfont.woff2") format("woff2"), url("../../assets/fonts/merriweather-bolditalic-webfont.woff") format("woff"), url("../../assets/fonts/merriweather-bolditalic-webfont.ttf") format("truetype");
+  src: url("../../fonts/merriweather-bolditalic-webfont.woff2") format("woff2"), url("../../fonts/merriweather-bolditalic-webfont.woff") format("woff"), url("../../fonts/merriweather-bolditalic-webfont.ttf") format("truetype");
   font-weight: bold;
   font-style: italic; }
 
 @font-face {
   font-family: 'Merriweather';
-  src: url("../../assets/fonts/merriweather-light-webfont.woff2") format("woff2"), url("../../assets/fonts/merriweather-light-webfont.woff") format("woff"), url("../../assets/fonts/merriweather-light-webfont.ttf") format("truetype");
+  src: url("../../fonts/merriweather-light-webfont.woff2") format("woff2"), url("../../fonts/merriweather-light-webfont.woff") format("woff"), url("../../fonts/merriweather-light-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Merriweather';
-  src: url("../../assets/fonts/merriweather-lightitalic-webfont.woff2") format("woff2"), url("../../assets/fonts/merriweather-lightitalic-webfont.woff") format("woff"), url("../../assets/fonts/merriweather-lightitalic-webfont.ttf") format("truetype");
+  src: url("../../fonts/merriweather-lightitalic-webfont.woff2") format("woff2"), url("../../fonts/merriweather-lightitalic-webfont.woff") format("woff"), url("../../fonts/merriweather-lightitalic-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: italic; }
 
 @font-face {
   font-family: 'Novecento';
-  src: url("../../assets/fonts/801c61f9a7c4eaea3d8ee1d3c4993ce9.woff2") format("woff2"), url("../../assets/fonts/801c61f9a7c4eaea3d8ee1d3c4993ce9.woff") format("woff"), url("../../assets/fonts/801c61f9a7c4eaea3d8ee1d3c4993ce9.ttf") format("truetype");
+  src: url("../../fonts/801c61f9a7c4eaea3d8ee1d3c4993ce9.woff2") format("woff2"), url("../../fonts/801c61f9a7c4eaea3d8ee1d3c4993ce9.woff") format("woff"), url("../../fonts/801c61f9a7c4eaea3d8ee1d3c4993ce9.ttf") format("truetype");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'Novecento';
-  src: url("../../assets/fonts/364b2d4eabcd5577f4ce6b0acecf075b.woff2") format("woff2"), url("../../assets/fonts/364b2d4eabcd5577f4ce6b0acecf075b.woff") format("woff"), url("../../assets/fonts/364b2d4eabcd5577f4ce6b0acecf075b.ttf") format("truetype");
+  src: url("../../fonts/364b2d4eabcd5577f4ce6b0acecf075b.woff2") format("woff2"), url("../../fonts/364b2d4eabcd5577f4ce6b0acecf075b.woff") format("woff"), url("../../fonts/364b2d4eabcd5577f4ce6b0acecf075b.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -316,7 +316,7 @@ mark, ins {
 big {
   font-size: 125%; }
 
-.link-reset, body.archive .page-header .product-stuff-links a, .widget.widget_archive ul li a, .sidebar-contact a, .site-footer .footer-contact a, .entry-readmore a, body.post-template-default .entry-footer a, body.search .site-content h2 a, .link-button, .social-buttons button, .link-button__color-green {
+.link-reset, body.archive .page-header .product-stuff-links a, .widget.widget_archive ul li a, .sidebar-contact a, .site-footer .footer-contact a, .entry-readmore a, body.post-template-default .entry-footer a, body.search .site-content h2 a, .link-button, .social-buttons button, .link-button__color-green, body.page-template-default div[role='form'] p input.wpcf7-form-control.wpcf7-submit {
   text-transform: none;
   text-decoration: none; }
 
@@ -803,9 +803,9 @@ h2.widget-title {
     font-family: 'Novecento'; }
 
 /* ------- Journal Page Styles ------- */
-body.blog .entry-readmore.link-button, body.blog .social-buttons button.entry-readmore, .social-buttons body.blog button.entry-readmore, body.blog .entry-readmore.link-button__color-green, body.archive .entry-readmore.link-button, body.archive .social-buttons button.entry-readmore, .social-buttons body.archive button.entry-readmore, body.archive .entry-readmore.link-button__color-green, body.search .entry-readmore.link-button, body.search .social-buttons button.entry-readmore, .social-buttons body.search button.entry-readmore, body.search .entry-readmore.link-button__color-green {
+body.blog .entry-readmore.link-button, body.blog .social-buttons button.entry-readmore, .social-buttons body.blog button.entry-readmore, body.blog .entry-readmore.link-button__color-green, body.blog body.page-template-default div[role='form'] p input.entry-readmore.wpcf7-form-control.wpcf7-submit, body.page-template-default div[role='form'] p body.blog input.entry-readmore.wpcf7-form-control.wpcf7-submit, body.archive .entry-readmore.link-button, body.archive .social-buttons button.entry-readmore, .social-buttons body.archive button.entry-readmore, body.archive .entry-readmore.link-button__color-green, body.archive body.page-template-default div[role='form'] p input.entry-readmore.wpcf7-form-control.wpcf7-submit, body.page-template-default div[role='form'] p body.archive input.entry-readmore.wpcf7-form-control.wpcf7-submit, body.search .entry-readmore.link-button, body.search .social-buttons button.entry-readmore, .social-buttons body.search button.entry-readmore, body.search .entry-readmore.link-button__color-green, body.search body.page-template-default div[role='form'] p input.entry-readmore.wpcf7-form-control.wpcf7-submit, body.page-template-default div[role='form'] p body.search input.entry-readmore.wpcf7-form-control.wpcf7-submit {
   width: 165px; }
-  body.blog .entry-readmore.link-button i, body.blog .social-buttons button.entry-readmore i, .social-buttons body.blog button.entry-readmore i, body.blog .entry-readmore.link-button__color-green i, body.archive .entry-readmore.link-button i, body.archive .social-buttons button.entry-readmore i, .social-buttons body.archive button.entry-readmore i, body.archive .entry-readmore.link-button__color-green i, body.search .entry-readmore.link-button i, body.search .social-buttons button.entry-readmore i, .social-buttons body.search button.entry-readmore i, body.search .entry-readmore.link-button__color-green i {
+  body.blog .entry-readmore.link-button i, body.blog .social-buttons button.entry-readmore i, .social-buttons body.blog button.entry-readmore i, body.blog .entry-readmore.link-button__color-green i, body.blog body.page-template-default div[role='form'] p input.entry-readmore.wpcf7-form-control.wpcf7-submit i, body.page-template-default div[role='form'] p body.blog input.entry-readmore.wpcf7-form-control.wpcf7-submit i, body.archive .entry-readmore.link-button i, body.archive .social-buttons button.entry-readmore i, .social-buttons body.archive button.entry-readmore i, body.archive .entry-readmore.link-button__color-green i, body.archive body.page-template-default div[role='form'] p input.entry-readmore.wpcf7-form-control.wpcf7-submit i, body.page-template-default div[role='form'] p body.archive input.entry-readmore.wpcf7-form-control.wpcf7-submit i, body.search .entry-readmore.link-button i, body.search .social-buttons button.entry-readmore i, .social-buttons body.search button.entry-readmore i, body.search .entry-readmore.link-button__color-green i, body.search body.page-template-default div[role='form'] p input.entry-readmore.wpcf7-form-control.wpcf7-submit i, body.page-template-default div[role='form'] p body.search input.entry-readmore.wpcf7-form-control.wpcf7-submit i {
     margin-left: 5px; }
 
 body.post-template-default .social-buttons {
@@ -813,21 +813,6 @@ body.post-template-default .social-buttons {
   body.post-template-default .social-buttons button:hover {
     color: white;
     border: none; }
-
-/* ------- Find Us Page Styles ------- */
-body.page-template-default h1, body.page-template-default h2 {
-  font-family: 'Novecento';
-  text-transform: uppercase;
-  line-height: 1.25; }
-
-body.page-template-default h1 {
-  font-size: 2.4rem; }
-
-body.page-template-default h2 {
-  font-size: 1.75rem; }
-
-body.page-template-default .entry-readmore.link-button, body.page-template-default .social-buttons button.entry-readmore, .social-buttons body.page-template-default button.entry-readmore, body.page-template-default .entry-readmore.link-button__color-green {
-  width: 170px; }
 
 /* ------- Content Area ------- */
 body:not(.tax-product-type):not(.page-template-about):not(.product-template-default):not(.post-type-archive):not(.home) .content-area {
@@ -1029,7 +1014,7 @@ object {
 
 /* - Hero Banner - */
 .front-page-hero {
-  background: url("//localhost:3000/inhabitent/wp-content/themes/inhabitent/assets/images/home-hero.jpg") no-repeat center;
+  background: url("//localhost:3000/inhabitent/wp-content/themes/inhabitent/images/home-hero.jpg") no-repeat center;
   background-size: cover;
   width: 100%;
   height: 100vh;
@@ -1063,10 +1048,10 @@ body.home.page-template-default .container h2, body.home.page-template-default .
   border: 1px solid #e1e1e1;
   border-top-width: 5px;
   margin: 0; }
-  .product-shop-stuff .product-block-item .entry-readmore.link-button__color-green {
+  .product-shop-stuff .product-block-item .entry-readmore.link-button__color-green, .product-shop-stuff .product-block-item body.page-template-default div[role='form'] p input.entry-readmore.wpcf7-form-control.wpcf7-submit, body.page-template-default div[role='form'] p .product-shop-stuff .product-block-item input.entry-readmore.wpcf7-form-control.wpcf7-submit {
     margin: 0.75rem;
     border: none; }
-    .product-shop-stuff .product-block-item .entry-readmore.link-button__color-green a {
+    .product-shop-stuff .product-block-item .entry-readmore.link-button__color-green a, .product-shop-stuff .product-block-item body.page-template-default div[role='form'] p input.entry-readmore.wpcf7-form-control.wpcf7-submit a, body.page-template-default div[role='form'] p .product-shop-stuff .product-block-item input.entry-readmore.wpcf7-form-control.wpcf7-submit a {
       color: #fff; }
   .product-shop-stuff .product-block-item:hover {
     border-color: #d99054; }
@@ -1190,11 +1175,40 @@ body.archive.tax-product-type .page-header p {
   font-size: 1rem;
   line-height: 1.75rem; }
 
+/* ------- Find Us Page Styles ------- */
+body.page-template-default h1, body.page-template-default h2 {
+  font-family: 'Novecento';
+  text-transform: uppercase;
+  line-height: 1.25; }
+
+body.page-template-default h1 {
+  font-size: 2.4rem; }
+
+body.page-template-default h2 {
+  font-size: 1.75rem; }
+
+body.page-template-default .entry-readmore.link-button, body.page-template-default .social-buttons button.entry-readmore, .social-buttons body.page-template-default button.entry-readmore, body.page-template-default .entry-readmore.link-button__color-green, body.page-template-default div[role='form'] p input.entry-readmore.wpcf7-form-control.wpcf7-submit {
+  width: 165px; }
+
+body.page-template-default div[role='form'] {
+  font-family: 'Novecento';
+  text-transform: uppercase; }
+  body.page-template-default div[role='form'] span.required-field {
+    color: red;
+    font-size: 0.75rem;
+    position: absolute; }
+  body.page-template-default div[role='form'] input, body.page-template-default div[role='form'] textarea {
+    background: #F4F4F4;
+    border-radius: 0;
+    margin-top: 0.75rem; }
+  body.page-template-default div[role='form'] p input.wpcf7-form-control.wpcf7-submit {
+    border: none !important; }
+
 /*--------------------------------------------------------------
 # Footer Styles
 --------------------------------------------------------------*/
 .site-footer {
-  background: url("../../assets/images/dark-wood.png");
+  background: url("../../images/dark-wood.png");
   color: white; }
   .site-footer .footer__contact,
   .site-footer .footer__business-hours,
@@ -1244,7 +1258,7 @@ body.archive.tax-product-type .page-header p {
 # Buttons
 --------------------------------------------------------------*/
 /* ------- Button for links ------- */
-.link-button, .social-buttons button, .link-button__color-green {
+.link-button, .social-buttons button, .link-button__color-green, body.page-template-default div[role='form'] p input.wpcf7-form-control.wpcf7-submit {
   background: #fff;
   border: 1px solid #000;
   padding: 0.75rem 1.5rem;
@@ -1252,12 +1266,13 @@ body.archive.tax-product-type .page-header p {
   font-family: "Novecento";
   font-size: 0.9rem;
   line-height: 1; }
-  .link-button:hover, .social-buttons button:hover, .link-button__color-green:hover {
-    background: #248A83; }
-    .link-button:hover a, .social-buttons button:hover a, .link-button__color-green:hover a {
-      color: #fff; }
-  .link-button__color-green {
+  .link-button:hover, .social-buttons button:hover, .link-button__color-green:hover, body.page-template-default div[role='form'] p input.wpcf7-form-control.wpcf7-submit:hover {
     background: #248A83;
     color: #fff; }
-    .link-button__color-green:hover {
+    .link-button:hover a, .social-buttons button:hover a, .link-button__color-green:hover a, body.page-template-default div[role='form'] p input.wpcf7-form-control.wpcf7-submit:hover a {
+      color: #fff; }
+  .link-button__color-green, body.page-template-default div[role='form'] p input.wpcf7-form-control.wpcf7-submit {
+    background: #248A83;
+    color: #fff; }
+    .link-button__color-green:hover, body.page-template-default div[role='form'] p input.wpcf7-form-control.wpcf7-submit:hover {
       background: #19625D; }

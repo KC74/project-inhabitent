@@ -8,7 +8,7 @@ get_header(); ?>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
             <section class="front-page-hero">
-                <img src="<?php echo get_site_url(); ?>/wp-content/themes/inhabitent/assets/images/logos/inhabitent-logo-full.svg"/>
+                <img src="<?php echo get_site_url(); ?>/wp-content/themes/inhabitent/images/logos/inhabitent-logo-full.svg"/>
             </section>
             <div class="product-shop container">
                 <h2>Shop Stuff</h2>
@@ -20,7 +20,7 @@ get_header(); ?>
 
                     <?php foreach ($terms as $term): ; ?>
                         <div class="product-block-item">
-                            <img src="<?php echo get_site_url(); ?>/wp-content/themes/inhabitent/assets/images/product-type-icons/<?echo $term->slug?>.svg"/>
+                            <img src="<?php echo get_site_url(); ?>/wp-content/themes/inhabitent/images/product-type-icons/<?echo $term->slug?>.svg"/>
                             <p><? echo $term->description; ?></p>
                             <div class="entry-readmore link-button__color-green">
                                 <a href="<?php echo get_site_url(); ?>/<?php echo $term->taxonomy; ?>/<?php echo $term->slug; ?>"> <?php echo $term->name; ?> Stuff</a>

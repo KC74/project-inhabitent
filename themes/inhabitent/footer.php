@@ -35,7 +35,7 @@
                     </div>
                     <div class="footer__logo">
 						<div class="footer__logo-container">
-							<a href="<?php echo inhabitent_the_url()?>"><img src="<?php echo inhabitent_the_url()?>/wp-content/themes/inhabitent/assets/images/logos/inhabitent-logo-text.svg" class="footer__logo-img"/></a>
+							<a href="<?php echo inhabitent_the_url()?>"><img src="<?php echo inhabitent_the_url()?>/wp-content/themes/inhabitent/images/logos/inhabitent-logo-text.svg" class="footer__logo-img"/></a>
 						</div>
                     </div>
                 </div><!-- .site-info -->
