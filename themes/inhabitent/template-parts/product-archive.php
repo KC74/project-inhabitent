@@ -11,7 +11,7 @@
     <header class="entry-header">
         <?php if ( has_post_thumbnail() ) : ?>
         <div class="product-thumbnail-wrapper">
-          <a href="<? echo get_post_permalink() ?>"><?php the_post_thumbnail( 'large' ); ?></a>
+          <a href="<?php echo get_post_permalink() ?>"><?php the_post_thumbnail( 'large' ); ?></a>
         </div>
         <?php endif; ?>
         <!-- <div class="entry-header__container"> -->

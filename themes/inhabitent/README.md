@@ -1,21 +1,57 @@
-# Inhabitent Starter
+# Project Inhabitent Wordpress Website
 
-A WordPress starter theme for Inhabitent Academy students, forked from Underscores.
+Inhabitent is a learning project based on the original tent.academy.red which models after an online retail store for camping equipment. The website is build using Wordpress CMS for the ease of cient-side experience in content management. 
 
-## Installation
+### Project Demonstrations
+###### Functionality:
+* Built using WordPress CMS
+* Contain a custom static homepage, About page, Contact page (with a * functioning contact form)
+* Contain a blog post index page and a single view for blog posts
+* Contain a product archive, a product type archive page, and single template for products
+* Contain a search results page and 404 page
 
-### 1. Download me (don't clone me!)
+###### Javascript: 
+* A toggle-able search function built into the header. Search expands and collapses with smooth animation during focus and blur states.
 
-Then add me to your `wp-content` directory.
+###### CSS / SASS: 
+* Implements the use of a CSS reset.
+* Uses SASS as a css preprocessor which then gets compiled into CSS.
+* Use of Flexbox rather than floats.
+* Use of custom fonts using @font-face imports.
+* Uses icon fonts.
 
-### 2. Rename the `redstarter` directory
+###### Wordpress Goals:
+* Support default Posts, Pages, and Comments
+* Use a WordPress menu (configured through the admin interface) for the main site navigation
+* Custom page template for “About Page” 
+    * dynamically add a hero banner uploaded using a custom field
+* Custom post type for “Products” inside of a custom functionality plugin
+    * Custom taxonomy for “Product Type” inside of a custom functionality plugin
+* Custom fields for additional metadata
+* Custom widget plugin to allow business hours to easily be edited in the sidebar by the client
+* Widgetized area in the sidebar
+* Enqueued CSS and JS files in the theme’s functions.php file
+* Validated with Theme Check plugin.
 
-Make sure that the theme directory name is project appropriate!
+### Tech & Languages Used
 
-### 3. Install the dev dependencies
+Inhabitent uses the following:
+* HTML
+* CSS
+* Javascript
+* Gulp
+* Git
+* PHP
+* Node
+* MAMP
+* Plugins
+    * Inhabitent Functionality
+    * Inhabitent Business Hours Widget
+    * Contact Form 7
+    * Custom Fields Suite
 
-Next you'll need to run `npm install` **inside your theme directory** next to install the node modules you'll need for Gulp, etc.
+## Setup
 
-### 4. Update the proxy in `gulpfile.js`
+**Install dependencies:**
 
-Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Browsersync proxy (so change `inhabitent.dev` to the appropriate localhost URL).
+`> npm i`

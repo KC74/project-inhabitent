@@ -20,8 +20,8 @@ get_header(); ?>
 
                     <?php foreach ($terms as $term): ; ?>
                         <div class="product-block-item">
-                            <img src="<?php echo get_site_url(); ?>/wp-content/themes/inhabitent/images/product-type-icons/<?echo $term->slug?>.svg"/>
-                            <p><? echo $term->description; ?></p>
+                            <img src="<?php echo get_site_url(); ?>/wp-content/themes/inhabitent/images/product-type-icons/<?php echo $term->slug?>.svg"/>
+                            <p><?php echo $term->description; ?></p>
                             <div class="entry-readmore link-button__color-green">
                                 <a href="<?php echo get_site_url(); ?>/<?php echo $term->taxonomy; ?>/<?php echo $term->slug; ?>"> <?php echo $term->name; ?> Stuff</a>
                             </div>
@@ -50,11 +50,11 @@ get_header(); ?>
                                         <?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php inhabitent_posted_by(); ?>
                                     </div><!-- .entry-meta -->
                                     
-                                    <h3><a class="journal-title" href="<? echo get_post_permalink() ?>"><?php the_title(); ?></a></h3>
+                                    <h3><a class="journal-title" href="<?php echo get_post_permalink() ?>"><?php the_title(); ?></a></h3>
                                     
                                 </div><!-- .entry-wrapper -->
                                 <div class="entry-readmore link-button">
-                                    <a href="<?echo get_post_permalink()?>">Read Entry</a>
+                                    <a href="<?php echo get_post_permalink()?>">Read Entry</a>
                                 </div><!-- .entry-readmore -->
                             </div><!-- .journal-recent-block-item -->
 
