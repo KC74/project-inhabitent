@@ -316,7 +316,7 @@ mark, ins {
 big {
   font-size: 125%; }
 
-.link-reset, body.archive.post-type-archive.post-type-archive-product .page-header .product-stuff-links a, .widget.widget_archive ul li a, .sidebar-contact a, .site-footer .footer-contact a, .entry-readmore a, .link-button, .product-wrapper .product-social-buttons button, .link-button__color-green {
+.link-reset, body.archive .page-header .product-stuff-links a, .widget.widget_archive ul li a, .sidebar-contact a, .site-footer .footer-contact a, .entry-readmore a, .link-button, .product-wrapper .product-social-buttons button, .link-button__color-green {
   text-transform: none;
   text-decoration: none; }
 
@@ -555,9 +555,9 @@ a {
 # Archives
 --------------------------------------------------------------*/
 /* ------- Product Archive Header ------- */
-body.archive.post-type-archive.post-type-archive-product .page-header {
+body.archive .page-header {
   margin-top: 2.25rem; }
-  body.archive.post-type-archive.post-type-archive-product .page-header .product-stuff-links {
+  body.archive .page-header .product-stuff-links {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
@@ -565,13 +565,13 @@ body.archive.post-type-archive.post-type-archive-product .page-header {
     margin-bottom: 3rem;
     border-bottom: 1px dashed #d1d1d1;
     padding-bottom: 2.5rem; }
-    body.archive.post-type-archive.post-type-archive-product .page-header .product-stuff-links a {
+    body.archive .page-header .product-stuff-links a {
       text-transform: uppercase;
       font-family: 'Novecento';
       font-size: 1.2rem;
       margin: 0 1.5rem; }
 
-body.archive.post-type-archive.post-type-archive-product h1 {
+body.archive h1 {
   text-transform: uppercase;
   font-family: 'Novecento';
   text-align: center;
@@ -879,10 +879,19 @@ body.page-template-default .entry-readmore.link-button, body.page-template-defau
   width: 170px; }
 
 /* ------- Content Area ------- */
-body:not(.page-template-about):not(.product-template-default):not(.post-type-archive):not(.home) .content-area {
+body:not(.tax-product-type):not(.page-template-about):not(.product-template-default):not(.post-type-archive):not(.home) .content-area {
   padding: 3rem 5% 3rem 0;
   width: 73%;
   border-right: 1px solid #e1e1e1; }
+
+/* ------- Single Product Type Page ------- */
+body.archive.tax-product-type .page-header p {
+  margin-bottom: 3rem;
+  border-bottom: 1px dashed #d1d1d1;
+  padding-bottom: 3rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.75rem; }
 
 /* ------- Posts and pages ------- */
 .site-content {

@@ -195,10 +195,24 @@ body.page-template-default {
 
 
 /* ------- Content Area ------- */
-body:not(.page-template-about):not(.product-template-default):not(.post-type-archive):not(.home) .content-area {
+body:not(.tax-product-type):not(.page-template-about):not(.product-template-default):not(.post-type-archive):not(.home) .content-area {
 	padding: 3rem 5% 3rem 0;
 	width: 73%;
 	border-right: 1px solid $color__background-hr; 
+}
+
+/* ------- Single Product Type Page ------- */
+body.archive.tax-product-type {
+	.page-header {
+		p {
+			margin-bottom: $base__space-unit * 2;
+            border-bottom: 1px dashed #d1d1d1;
+			padding-bottom: 3rem;
+			text-align: center;
+			font-size: 1rem;
+			line-height: 1.75rem;
+		}
+	}
 }
 
 /* ------- Posts and pages ------- */
