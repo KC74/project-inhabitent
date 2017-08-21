@@ -20,5 +20,8 @@
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
+		<div class="entry-readmore link-button">
+			<a href="<?php echo get_site_url(); ?>/<?php echo the_title() ?>">Read More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+		</div>
 	</div><!-- .entry-summary -->
 </article><!-- #post-## -->

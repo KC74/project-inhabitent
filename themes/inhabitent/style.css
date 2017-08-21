@@ -316,7 +316,7 @@ mark, ins {
 big {
   font-size: 125%; }
 
-.link-reset, body.archive .page-header .product-stuff-links a, .widget.widget_archive ul li a, .sidebar-contact a, .site-footer .footer-contact a, body.search .site-content h2 a, .entry-readmore a, body.post-template-default .entry-footer a, .link-button, .social-buttons button, .link-button__color-green {
+.link-reset, body.archive .page-header .product-stuff-links a, .widget.widget_archive ul li a, .sidebar-contact a, .site-footer .footer-contact a, .entry-readmore a, body.post-template-default .entry-footer a, body.search .site-content h2 a, .link-button, .social-buttons button, .link-button__color-green {
   text-transform: none;
   text-decoration: none; }
 
@@ -487,13 +487,39 @@ a {
 /* Menus */
 .main-navigation {
   clear: both;
-  display: block;
-  width: 100%; }
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: end;
+      justify-content: flex-end; }
+  .main-navigation form {
+    margin-left: 1.5rem; }
+    .main-navigation form label input.search-field {
+      text-transform: uppercase;
+      background: none;
+      border: none;
+      font-family: 'Novecento';
+      outline: none;
+      padding-left: 0;
+      width: 0;
+      visibility: hidden; }
+    .main-navigation form a.search-submit {
+      padding: 0;
+      margin-right: 0.5rem;
+      display: inline-block;
+      cursor: pointer; }
+      .main-navigation form a.search-submit i {
+        color: #248A83; }
+  .main-navigation .search-expanded {
+    visibility: visible;
+    width: 100px;
+    transition: width 2s ease-in-out; }
   .main-navigation ul {
-    display: none;
+    display: inline-block;
     list-style: none;
     margin: 0;
-    padding-left: 0; }
+    padding-left: 0;
+    margin-right: 1.5rem; }
     .main-navigation ul ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       position: absolute;
@@ -737,10 +763,10 @@ h2.widget-title {
 # Content
 --------------------------------------------------------------*/
 /* General */
-.container, .container-flex, .product-archive-grid, .container-flex--row-nowrap, .product-shop-stuff, .product-shop-stuff .product-block-item, .site-content, .product-wrapper {
+.container, .container-flex, .product-archive-grid, .container-flex--row-nowrap, .site-content, .product-wrapper, .product-shop-stuff, .product-shop-stuff .product-block-item {
   width: 1120px;
   margin: 0 auto; }
-  .container-flex, .product-archive-grid, .container-flex--row-nowrap, .product-shop-stuff, .product-shop-stuff .product-block-item, .site-content, .product-wrapper {
+  .container-flex, .product-archive-grid, .container-flex--row-nowrap, .site-content, .product-wrapper, .product-shop-stuff, .product-shop-stuff .product-block-item {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: justify;
@@ -748,94 +774,6 @@ h2.widget-title {
     .container-flex--row-nowrap {
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap; }
-
-/* ------- Front Page Styles ------- */
-.product-shop.container, .product-shop.container-flex, .product-shop.product-archive-grid, .product-shop.container-flex--row-nowrap, .product-shop.product-shop-stuff, .product-shop-stuff .product-shop.product-block-item, .product-shop.site-content, .product-shop.product-wrapper, .recent-journals.container, .recent-journals.container-flex, .recent-journals.product-archive-grid, .recent-journals.container-flex--row-nowrap, .recent-journals.product-shop-stuff, .product-shop-stuff .recent-journals.product-block-item, .recent-journals.site-content, .recent-journals.product-wrapper {
-  margin-bottom: 4.5rem; }
-
-/* - Hero Banner - */
-.front-page-hero {
-  background: url("//localhost:3000/inhabitent/wp-content/themes/inhabitent/assets/images/home-hero.jpg") no-repeat center;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center; }
-
-/* - Shop Stuff Catagories - */
-body.home.page-template-default .container h2, body.home.page-template-default .container-flex h2, body.home.page-template-default .product-archive-grid h2, body.home.page-template-default .container-flex--row-nowrap h2, body.home.page-template-default .product-shop-stuff h2, .product-shop-stuff body.home.page-template-default .product-block-item h2, body.home.page-template-default .site-content h2, body.home.page-template-default .product-wrapper h2 {
-  font-family: 'Novecento';
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 2.25rem;
-  font-weight: normal;
-  letter-spacing: 4px;
-  margin: 3.75rem 0; }
-
-.product-shop-stuff .product-block-item {
-  -ms-flex-flow: column nowrap;
-      flex-flow: column nowrap;
-  -ms-flex-align: center;
-      align-items: center;
-  text-align: center;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  padding: 0.75rem;
-  width: 23.5%;
-  border: 1px solid #e1e1e1;
-  border-top-width: 5px;
-  margin: 0; }
-  .product-shop-stuff .product-block-item .entry-readmore.link-button__color-green {
-    margin: 0.75rem;
-    border: none; }
-    .product-shop-stuff .product-block-item .entry-readmore.link-button__color-green a {
-      color: #fff; }
-  .product-shop-stuff .product-block-item:hover {
-    border-color: #d99054; }
-  .product-shop-stuff .product-block-item p {
-    line-height: 1.75rem; }
-
-/* - Most Recent Journal Posts - */
-.recent-journals.container, .recent-journals.container-flex, .recent-journals.product-archive-grid, .recent-journals.container-flex--row-nowrap, .recent-journals.product-shop-stuff, .product-shop-stuff .recent-journals.product-block-item, .recent-journals.site-content, .recent-journals.product-wrapper {
-  width: 1120px; }
-  .recent-journals.container h3, .recent-journals.container-flex h3, .recent-journals.product-archive-grid h3, .recent-journals.container-flex--row-nowrap h3, .recent-journals.product-shop-stuff h3, .product-shop-stuff .recent-journals.product-block-item h3, .recent-journals.site-content h3, .recent-journals.product-wrapper h3 {
-    letter-spacing: 2px;
-    font-family: 'Novecento';
-    margin: 0;
-    line-height: 1.75rem; }
-    .recent-journals.container h3 a, .recent-journals.container-flex h3 a, .recent-journals.product-archive-grid h3 a, .recent-journals.container-flex--row-nowrap h3 a, .recent-journals.product-shop-stuff h3 a, .product-shop-stuff .recent-journals.product-block-item h3 a, .recent-journals.site-content h3 a, .recent-journals.product-wrapper h3 a {
-      font-size: 1.3rem;
-      text-transform: uppercase;
-      text-decoration: none; }
-  .recent-journals.container .most-recent-journals, .recent-journals.container-flex .most-recent-journals, .recent-journals.product-archive-grid .most-recent-journals, .recent-journals.container-flex--row-nowrap .most-recent-journals, .recent-journals.product-shop-stuff .most-recent-journals, .product-shop-stuff .recent-journals.product-block-item .most-recent-journals, .recent-journals.site-content .most-recent-journals, .recent-journals.product-wrapper .most-recent-journals {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-flow: row nowrap;
-        flex-flow: row nowrap;
-    -ms-flex-pack: justify;
-        justify-content: space-between; }
-  .recent-journals.container .journal-recent-block-item, .recent-journals.container-flex .journal-recent-block-item, .recent-journals.product-archive-grid .journal-recent-block-item, .recent-journals.container-flex--row-nowrap .journal-recent-block-item, .recent-journals.product-shop-stuff .journal-recent-block-item, .product-shop-stuff .recent-journals.product-block-item .journal-recent-block-item, .recent-journals.site-content .journal-recent-block-item, .recent-journals.product-wrapper .journal-recent-block-item {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-flow: column nowrap;
-        flex-flow: column nowrap;
-    border: 1px solid #d1d1d1;
-    width: 32.5%; }
-    .recent-journals.container .journal-recent-block-item img, .recent-journals.container-flex .journal-recent-block-item img, .recent-journals.product-archive-grid .journal-recent-block-item img, .recent-journals.container-flex--row-nowrap .journal-recent-block-item img, .recent-journals.product-shop-stuff .journal-recent-block-item img, .product-shop-stuff .recent-journals.product-block-item .journal-recent-block-item img, .recent-journals.site-content .journal-recent-block-item img, .recent-journals.product-wrapper .journal-recent-block-item img {
-      height: 250px;
-      border-bottom: 5px solid #d1d1d1; }
-    .recent-journals.container .journal-recent-block-item .entry-wrapper, .recent-journals.container-flex .journal-recent-block-item .entry-wrapper, .recent-journals.product-archive-grid .journal-recent-block-item .entry-wrapper, .recent-journals.container-flex--row-nowrap .journal-recent-block-item .entry-wrapper, .recent-journals.product-shop-stuff .journal-recent-block-item .entry-wrapper, .product-shop-stuff .recent-journals.product-block-item .journal-recent-block-item .entry-wrapper, .recent-journals.site-content .journal-recent-block-item .entry-wrapper, .recent-journals.product-wrapper .journal-recent-block-item .entry-wrapper {
-      height: 100%;
-      padding: 0.75rem; }
-      .recent-journals.container .journal-recent-block-item .entry-wrapper .entry-meta, .recent-journals.container-flex .journal-recent-block-item .entry-wrapper .entry-meta, .recent-journals.product-archive-grid .journal-recent-block-item .entry-wrapper .entry-meta, .recent-journals.container-flex--row-nowrap .journal-recent-block-item .entry-wrapper .entry-meta, .recent-journals.product-shop-stuff .journal-recent-block-item .entry-wrapper .entry-meta, .product-shop-stuff .recent-journals.product-block-item .journal-recent-block-item .entry-wrapper .entry-meta, .recent-journals.site-content .journal-recent-block-item .entry-wrapper .entry-meta, .recent-journals.product-wrapper .journal-recent-block-item .entry-wrapper .entry-meta {
-        font-size: 0.75rem; }
-    .recent-journals.container .journal-recent-block-item .entry-readmore, .recent-journals.container-flex .journal-recent-block-item .entry-readmore, .recent-journals.product-archive-grid .journal-recent-block-item .entry-readmore, .recent-journals.container-flex--row-nowrap .journal-recent-block-item .entry-readmore, .recent-journals.product-shop-stuff .journal-recent-block-item .entry-readmore, .product-shop-stuff .recent-journals.product-block-item .journal-recent-block-item .entry-readmore, .recent-journals.site-content .journal-recent-block-item .entry-readmore, .recent-journals.product-wrapper .journal-recent-block-item .entry-readmore {
-      width: 40%;
-      margin: 0.75rem; }
 
 /* ------- About Us Page Styles ------- */
 .page-template-about .entry-header.custom-hero h1.entry-title {
@@ -860,8 +798,10 @@ body.home.page-template-default .container h2, body.home.page-template-default .
     font-family: 'Novecento'; }
 
 /* ------- Journal Page Styles ------- */
-body.blog .entry-readmore.link-button, body.blog .social-buttons button.entry-readmore, .social-buttons body.blog button.entry-readmore, body.blog .entry-readmore.link-button__color-green, body.archive .entry-readmore.link-button, body.archive .social-buttons button.entry-readmore, .social-buttons body.archive button.entry-readmore, body.archive .entry-readmore.link-button__color-green {
-  width: 170px; }
+body.blog .entry-readmore.link-button, body.blog .social-buttons button.entry-readmore, .social-buttons body.blog button.entry-readmore, body.blog .entry-readmore.link-button__color-green, body.archive .entry-readmore.link-button, body.archive .social-buttons button.entry-readmore, .social-buttons body.archive button.entry-readmore, body.archive .entry-readmore.link-button__color-green, body.search .entry-readmore.link-button, body.search .social-buttons button.entry-readmore, .social-buttons body.search button.entry-readmore, body.search .entry-readmore.link-button__color-green {
+  width: 165px; }
+  body.blog .entry-readmore.link-button i, body.blog .social-buttons button.entry-readmore i, .social-buttons body.blog button.entry-readmore i, body.blog .entry-readmore.link-button__color-green i, body.archive .entry-readmore.link-button i, body.archive .social-buttons button.entry-readmore i, .social-buttons body.archive button.entry-readmore i, body.archive .entry-readmore.link-button__color-green i, body.search .entry-readmore.link-button i, body.search .social-buttons button.entry-readmore i, .social-buttons body.search button.entry-readmore i, body.search .entry-readmore.link-button__color-green i {
+    margin-left: 5px; }
 
 body.post-template-default .social-buttons {
   margin-top: 1.5rem; }
@@ -889,64 +829,6 @@ body:not(.tax-product-type):not(.page-template-about):not(.product-template-defa
   padding: 3rem 5% 3rem 0;
   width: 73%;
   border-right: 1px solid #e1e1e1; }
-
-/* ------- Single Product Type Page ------- */
-body.archive.tax-product-type .page-header p {
-  margin-bottom: 3rem;
-  border-bottom: 1px dashed #d1d1d1;
-  padding-bottom: 3rem;
-  text-align: center;
-  font-size: 1rem;
-  line-height: 1.75rem; }
-
-/* ------- Search Form ------- */
-form[role='search'] fieldset {
-  border: none;
-  padding: 0;
-  margin: 0; }
-
-form[role='search'] .search-submit {
-  visibility: hidden; }
-
-form[role='search'] input {
-  background: #F4F4F4;
-  border-radius: 0;
-  padding: 0.5rem; }
-
-/* ------- Search Page ------- */
-body.search .page-header {
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #e1e1e1; }
-  body.search .page-header h1 {
-    font-family: 'Novecento';
-    letter-spacing: 2px;
-    font-size: 2.25rem;
-    text-transform: uppercase; }
-
-body.search .site-content h2 {
-  font-family: 'Novecento';
-  letter-spacing: 2px;
-  font-size: 2.25rem; }
-  body.search .site-content h2 a {
-    text-transform: uppercase; }
-
-/* ------- 404 Page ------- */
-body.error404 h2 {
-  text-transform: uppercase;
-  font-family: 'Novecento';
-  letter-spacing: 2px; }
-
-body.error404 ul {
-  margin: 0;
-  padding: 0; }
-  body.error404 ul li {
-    list-style: none; }
-    body.error404 ul li a {
-      text-decoration: none; }
-
-body.error404 select {
-  background: #fff;
-  border-radius: 0; }
 
 /* ------- Posts and pages ------- */
 .site-content {
@@ -1136,7 +1018,173 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-/* Front page */
+/* ------- Front Page Styles ------- */
+.product-shop.container, .product-shop.container-flex, .product-shop.product-archive-grid, .product-shop.container-flex--row-nowrap, .product-shop.site-content, .product-shop.product-wrapper, .product-shop.product-shop-stuff, .product-shop-stuff .product-shop.product-block-item, .recent-journals.container, .recent-journals.container-flex, .recent-journals.product-archive-grid, .recent-journals.container-flex--row-nowrap, .recent-journals.site-content, .recent-journals.product-wrapper, .recent-journals.product-shop-stuff, .product-shop-stuff .recent-journals.product-block-item {
+  margin-bottom: 4.5rem; }
+
+/* - Hero Banner - */
+.front-page-hero {
+  background: url("//localhost:3000/inhabitent/wp-content/themes/inhabitent/assets/images/home-hero.jpg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+
+/* - Shop Stuff Catagories - */
+body.home.page-template-default .container h2, body.home.page-template-default .container-flex h2, body.home.page-template-default .product-archive-grid h2, body.home.page-template-default .container-flex--row-nowrap h2, body.home.page-template-default .site-content h2, body.home.page-template-default .product-wrapper h2, body.home.page-template-default .product-shop-stuff h2, .product-shop-stuff body.home.page-template-default .product-block-item h2 {
+  font-family: 'Novecento';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: normal;
+  letter-spacing: 4px;
+  margin: 3.75rem 0; }
+
+.product-shop-stuff .product-block-item {
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  -ms-flex-align: center;
+      align-items: center;
+  text-align: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 0.75rem;
+  width: 23.5%;
+  border: 1px solid #e1e1e1;
+  border-top-width: 5px;
+  margin: 0; }
+  .product-shop-stuff .product-block-item .entry-readmore.link-button__color-green {
+    margin: 0.75rem;
+    border: none; }
+    .product-shop-stuff .product-block-item .entry-readmore.link-button__color-green a {
+      color: #fff; }
+  .product-shop-stuff .product-block-item:hover {
+    border-color: #d99054; }
+  .product-shop-stuff .product-block-item p {
+    line-height: 1.75rem; }
+
+/* - Most Recent Journal Posts - */
+.recent-journals.container, .recent-journals.container-flex, .recent-journals.product-archive-grid, .recent-journals.container-flex--row-nowrap, .recent-journals.site-content, .recent-journals.product-wrapper, .recent-journals.product-shop-stuff, .product-shop-stuff .recent-journals.product-block-item {
+  width: 1120px; }
+  .recent-journals.container h3, .recent-journals.container-flex h3, .recent-journals.product-archive-grid h3, .recent-journals.container-flex--row-nowrap h3, .recent-journals.site-content h3, .recent-journals.product-wrapper h3, .recent-journals.product-shop-stuff h3, .product-shop-stuff .recent-journals.product-block-item h3 {
+    letter-spacing: 2px;
+    font-family: 'Novecento';
+    margin: 0;
+    line-height: 1.75rem; }
+    .recent-journals.container h3 a, .recent-journals.container-flex h3 a, .recent-journals.product-archive-grid h3 a, .recent-journals.container-flex--row-nowrap h3 a, .recent-journals.site-content h3 a, .recent-journals.product-wrapper h3 a, .recent-journals.product-shop-stuff h3 a, .product-shop-stuff .recent-journals.product-block-item h3 a {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      text-decoration: none; }
+  .recent-journals.container .most-recent-journals, .recent-journals.container-flex .most-recent-journals, .recent-journals.product-archive-grid .most-recent-journals, .recent-journals.container-flex--row-nowrap .most-recent-journals, .recent-journals.site-content .most-recent-journals, .recent-journals.product-wrapper .most-recent-journals, .recent-journals.product-shop-stuff .most-recent-journals, .product-shop-stuff .recent-journals.product-block-item .most-recent-journals {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+  .recent-journals.container .journal-recent-block-item, .recent-journals.container-flex .journal-recent-block-item, .recent-journals.product-archive-grid .journal-recent-block-item, .recent-journals.container-flex--row-nowrap .journal-recent-block-item, .recent-journals.site-content .journal-recent-block-item, .recent-journals.product-wrapper .journal-recent-block-item, .recent-journals.product-shop-stuff .journal-recent-block-item, .product-shop-stuff .recent-journals.product-block-item .journal-recent-block-item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+    border: 1px solid #d1d1d1;
+    width: 32.5%; }
+    .recent-journals.container .journal-recent-block-item img, .recent-journals.container-flex .journal-recent-block-item img, .recent-journals.product-archive-grid .journal-recent-block-item img, .recent-journals.container-flex--row-nowrap .journal-recent-block-item img, .recent-journals.site-content .journal-recent-block-item img, .recent-journals.product-wrapper .journal-recent-block-item img, .recent-journals.product-shop-stuff .journal-recent-block-item img, .product-shop-stuff .recent-journals.product-block-item .journal-recent-block-item img {
+      height: 250px;
+      border-bottom: 5px solid #d1d1d1; }
+    .recent-journals.container .journal-recent-block-item .entry-wrapper, .recent-journals.container-flex .journal-recent-block-item .entry-wrapper, .recent-journals.product-archive-grid .journal-recent-block-item .entry-wrapper, .recent-journals.container-flex--row-nowrap .journal-recent-block-item .entry-wrapper, .recent-journals.site-content .journal-recent-block-item .entry-wrapper, .recent-journals.product-wrapper .journal-recent-block-item .entry-wrapper, .recent-journals.product-shop-stuff .journal-recent-block-item .entry-wrapper, .product-shop-stuff .recent-journals.product-block-item .journal-recent-block-item .entry-wrapper {
+      height: 100%;
+      padding: 0.75rem; }
+      .recent-journals.container .journal-recent-block-item .entry-wrapper .entry-meta, .recent-journals.container-flex .journal-recent-block-item .entry-wrapper .entry-meta, .recent-journals.product-archive-grid .journal-recent-block-item .entry-wrapper .entry-meta, .recent-journals.container-flex--row-nowrap .journal-recent-block-item .entry-wrapper .entry-meta, .recent-journals.site-content .journal-recent-block-item .entry-wrapper .entry-meta, .recent-journals.product-wrapper .journal-recent-block-item .entry-wrapper .entry-meta, .recent-journals.product-shop-stuff .journal-recent-block-item .entry-wrapper .entry-meta, .product-shop-stuff .recent-journals.product-block-item .journal-recent-block-item .entry-wrapper .entry-meta {
+        font-size: 0.75rem; }
+    .recent-journals.container .journal-recent-block-item .entry-readmore, .recent-journals.container-flex .journal-recent-block-item .entry-readmore, .recent-journals.product-archive-grid .journal-recent-block-item .entry-readmore, .recent-journals.container-flex--row-nowrap .journal-recent-block-item .entry-readmore, .recent-journals.site-content .journal-recent-block-item .entry-readmore, .recent-journals.product-wrapper .journal-recent-block-item .entry-readmore, .recent-journals.product-shop-stuff .journal-recent-block-item .entry-readmore, .product-shop-stuff .recent-journals.product-block-item .journal-recent-block-item .entry-readmore {
+      width: 40%;
+      margin: 0.75rem; }
+
+/* ------- Search Form ------- */
+form[role='search'] fieldset {
+  border: none;
+  padding: 0;
+  margin: 0; }
+
+form[role='search'] .search-submit {
+  display: none; }
+
+form[role='search'] input {
+  background: #F4F4F4;
+  border-radius: 0;
+  padding: 0.5rem; }
+
+/* ------- Search Page ------- */
+body.search .page-header {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e1e1e1; }
+  body.search .page-header h1 {
+    font-family: 'Novecento';
+    letter-spacing: 2px;
+    font-size: 2.25rem;
+    text-transform: uppercase; }
+
+body.search .site-content h2 {
+  font-family: 'Novecento';
+  letter-spacing: 2px;
+  font-size: 2.25rem; }
+  body.search .site-content h2 a {
+    text-transform: uppercase; }
+
+body.search .search-pagination {
+  padding-top: 1.5rem;
+  margin-top: 3rem;
+  border-top: 1px solid #e1e1e1; }
+  body.search .search-pagination .page-numbers, body.search .search-pagination .next {
+    padding: 5px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Novecento'; }
+  body.search .search-pagination .page-numbers {
+    background: #248A83;
+    color: #fff; }
+    body.search .search-pagination .page-numbers.current {
+      background: #808080; }
+
+body.search #primary.content-area {
+  padding-bottom: 4.5rem; }
+
+body.search .site-footer {
+  margin: 0; }
+
+/* ------- 404 Page ------- */
+body.error404 h2 {
+  text-transform: uppercase;
+  font-family: 'Novecento';
+  letter-spacing: 2px; }
+
+body.error404 ul {
+  margin: 0;
+  padding: 0; }
+  body.error404 ul li {
+    list-style: none; }
+    body.error404 ul li a {
+      text-decoration: none; }
+
+body.error404 select {
+  background: #fff;
+  border-radius: 0; }
+
+/* ------- Single Product Type Page ------- */
+body.archive.tax-product-type .page-header p {
+  margin-bottom: 3rem;
+  border-bottom: 1px dashed #d1d1d1;
+  padding-bottom: 3rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.75rem; }
+
 /*--------------------------------------------------------------
 # Footer Styles
 --------------------------------------------------------------*/
@@ -1179,9 +1227,9 @@ object {
   .site-footer .footer__copyright {
     padding: 1.5rem 0;
     font-family: 'Novecento'; }
-    .site-footer .footer__copyright .container, .site-footer .footer__copyright .container-flex, .site-footer .footer__copyright .product-archive-grid, .site-footer .footer__copyright .container-flex--row-nowrap, .site-footer .footer__copyright .product-shop-stuff, .site-footer .footer__copyright .product-shop-stuff .product-block-item, .product-shop-stuff .site-footer .footer__copyright .product-block-item, .site-footer .footer__copyright .site-content, .site-footer .footer__copyright .product-wrapper {
+    .site-footer .footer__copyright .container, .site-footer .footer__copyright .container-flex, .site-footer .footer__copyright .product-archive-grid, .site-footer .footer__copyright .container-flex--row-nowrap, .site-footer .footer__copyright .site-content, .site-footer .footer__copyright .product-wrapper, .site-footer .footer__copyright .product-shop-stuff, .site-footer .footer__copyright .product-shop-stuff .product-block-item, .product-shop-stuff .site-footer .footer__copyright .product-block-item {
       text-align: center; }
-      .site-footer .footer__copyright .container p, .site-footer .footer__copyright .container-flex p, .site-footer .footer__copyright .product-archive-grid p, .site-footer .footer__copyright .container-flex--row-nowrap p, .site-footer .footer__copyright .product-shop-stuff p, .product-shop-stuff .site-footer .footer__copyright .product-block-item p, .site-footer .footer__copyright .site-content p, .site-footer .footer__copyright .product-wrapper p {
+      .site-footer .footer__copyright .container p, .site-footer .footer__copyright .container-flex p, .site-footer .footer__copyright .product-archive-grid p, .site-footer .footer__copyright .container-flex--row-nowrap p, .site-footer .footer__copyright .site-content p, .site-footer .footer__copyright .product-wrapper p, .site-footer .footer__copyright .product-shop-stuff p, .product-shop-stuff .site-footer .footer__copyright .product-block-item p {
         margin: 0; }
   .site-footer .footer-container {
     display: -ms-flexbox;
