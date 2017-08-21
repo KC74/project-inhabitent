@@ -107,3 +107,15 @@ add_filter( 'get_the_archive_title', function ( $title ) {
 		return $title = 'Shop Stuff';
 	
 });
+
+/**
+ * Filter the except length to 50 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function inhabitent_custom_excerpt_length( $length ) {
+    return 50;
+}
+add_filter( 'excerpt_length', 'inhabitent_custom_excerpt_length', 999 );
+

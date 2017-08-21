@@ -166,10 +166,21 @@ body.home.page-template-default {
 }
 
 /* ------- Journal Page Styles ------- */
-body.blog {
+body.blog, body.archive {
 
 	.entry-readmore.link-button {
 		width: 170px;
+	}
+}
+
+body.post-template-default {
+	.social-buttons {
+		margin-top: $base__space-unit;
+
+		& button:hover {
+				color: white;
+				border: none;
+		}
 	}
 }
 
@@ -215,12 +226,82 @@ body.archive.tax-product-type {
 	}
 }
 
+/* ------- Search Form ------- */
+form[role='search'] {
+	fieldset {
+		border: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.search-submit {
+		visibility: hidden;
+	}
+
+	input {
+		background: #F4F4F4;
+		border-radius: 0;
+		padding: $base__space-unit / 3;
+	}
+}
+
+/* ------- Search Page ------- */
+body.search {
+	.page-header {
+		padding-bottom: $base__space-unit / 3;
+		border-bottom: 1px solid $color__background-hr;
+		h1 {
+			font-family: 'Novecento';
+			letter-spacing: 2px;
+			font-size: $base__space-unit * 1.5;
+			text-transform: uppercase;
+		}
+	}
+	.site-content h2 {
+		font-family: 'Novecento';
+		letter-spacing: 2px;
+		font-size: $base__space-unit * 1.5;
+		a {
+			@extend .link-reset;
+			text-transform: uppercase;
+		}
+	}
+}
+
+/* ------- 404 Page ------- */
+
+body.error404 {
+	h2 {
+		text-transform: uppercase;
+		font-family: 'Novecento';
+		letter-spacing: 2px;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+
+		li {
+			list-style: none;
+			
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+
+	select {
+		background: #fff;
+		border-radius: 0;
+	}
+}
+
 /* ------- Posts and pages ------- */
 
 .site-content {
 	@extend .container-flex;
 	width: $content__size-width;
-	padding-top: $base__space-unit * 3;
+	padding-top: 3.5rem;
 }
 
 body.home.page-template-default .site-content,
@@ -267,20 +348,21 @@ body.page-template-about .site-content .content-area, {
 		}
 	}
 
-	.product-social-buttons {
-		width: 100%;
+}
 
-		button {
-			@extend .link-button;
+.social-buttons {
+	width: 100%;
 
-			i {
-				margin-right: $base__space-unit / 2;
-			}
+	button {
+		@extend .link-button;
+
+		i {
+			margin-right: $base__space-unit / 2;
 		}
 	}
 }
 
-body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header {
+body:not(.search):not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header {
 	position: relative;
 
 	img {
@@ -399,3 +481,4 @@ body.post-template-default {
 		}
 	}
 }
+

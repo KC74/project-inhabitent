@@ -20,6 +20,9 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'template-parts/content', 'search' ); ?>
+				<div class="entry-readmore link-button">
+					<a href="<?php echo get_site_url(); ?>/<?php echo the_title() ?>">Read More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+				</div>
 
 			<?php endwhile; ?>
 

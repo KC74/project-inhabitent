@@ -316,7 +316,7 @@ mark, ins {
 big {
   font-size: 125%; }
 
-.link-reset, body.archive .page-header .product-stuff-links a, .widget.widget_archive ul li a, .sidebar-contact a, .site-footer .footer-contact a, .entry-readmore a, body.post-template-default .entry-footer a, .link-button, .product-wrapper .product-social-buttons button, .link-button__color-green {
+.link-reset, body.archive .page-header .product-stuff-links a, .widget.widget_archive ul li a, .sidebar-contact a, .site-footer .footer-contact a, body.search .site-content h2 a, .entry-readmore a, body.post-template-default .entry-footer a, .link-button, .social-buttons button, .link-button__color-green {
   text-transform: none;
   text-decoration: none; }
 
@@ -860,8 +860,14 @@ body.home.page-template-default .container h2, body.home.page-template-default .
     font-family: 'Novecento'; }
 
 /* ------- Journal Page Styles ------- */
-body.blog .entry-readmore.link-button, body.blog .product-wrapper .product-social-buttons button.entry-readmore, .product-wrapper .product-social-buttons body.blog button.entry-readmore, body.blog .entry-readmore.link-button__color-green {
+body.blog .entry-readmore.link-button, body.blog .social-buttons button.entry-readmore, .social-buttons body.blog button.entry-readmore, body.blog .entry-readmore.link-button__color-green, body.archive .entry-readmore.link-button, body.archive .social-buttons button.entry-readmore, .social-buttons body.archive button.entry-readmore, body.archive .entry-readmore.link-button__color-green {
   width: 170px; }
+
+body.post-template-default .social-buttons {
+  margin-top: 1.5rem; }
+  body.post-template-default .social-buttons button:hover {
+    color: white;
+    border: none; }
 
 /* ------- Find Us Page Styles ------- */
 body.page-template-default h1, body.page-template-default h2 {
@@ -875,7 +881,7 @@ body.page-template-default h1 {
 body.page-template-default h2 {
   font-size: 1.75rem; }
 
-body.page-template-default .entry-readmore.link-button, body.page-template-default .product-wrapper .product-social-buttons button.entry-readmore, .product-wrapper .product-social-buttons body.page-template-default button.entry-readmore, body.page-template-default .entry-readmore.link-button__color-green {
+body.page-template-default .entry-readmore.link-button, body.page-template-default .social-buttons button.entry-readmore, .social-buttons body.page-template-default button.entry-readmore, body.page-template-default .entry-readmore.link-button__color-green {
   width: 170px; }
 
 /* ------- Content Area ------- */
@@ -893,10 +899,59 @@ body.archive.tax-product-type .page-header p {
   font-size: 1rem;
   line-height: 1.75rem; }
 
+/* ------- Search Form ------- */
+form[role='search'] fieldset {
+  border: none;
+  padding: 0;
+  margin: 0; }
+
+form[role='search'] .search-submit {
+  visibility: hidden; }
+
+form[role='search'] input {
+  background: #F4F4F4;
+  border-radius: 0;
+  padding: 0.5rem; }
+
+/* ------- Search Page ------- */
+body.search .page-header {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e1e1e1; }
+  body.search .page-header h1 {
+    font-family: 'Novecento';
+    letter-spacing: 2px;
+    font-size: 2.25rem;
+    text-transform: uppercase; }
+
+body.search .site-content h2 {
+  font-family: 'Novecento';
+  letter-spacing: 2px;
+  font-size: 2.25rem; }
+  body.search .site-content h2 a {
+    text-transform: uppercase; }
+
+/* ------- 404 Page ------- */
+body.error404 h2 {
+  text-transform: uppercase;
+  font-family: 'Novecento';
+  letter-spacing: 2px; }
+
+body.error404 ul {
+  margin: 0;
+  padding: 0; }
+  body.error404 ul li {
+    list-style: none; }
+    body.error404 ul li a {
+      text-decoration: none; }
+
+body.error404 select {
+  background: #fff;
+  border-radius: 0; }
+
 /* ------- Posts and pages ------- */
 .site-content {
   width: 1120px;
-  padding-top: 4.5rem; }
+  padding-top: 3.5rem; }
 
 body.home.page-template-default .site-content,
 body.home.page-template-default .site-content .content-area,
@@ -927,26 +982,27 @@ body.page-template-about .site-content .content-area {
       font-size: 2.4rem; }
     .product-wrapper .entry-content__p-product, .product-wrapper .entry-content p, .entry-content .product-wrapper p {
       margin-bottom: 1rem; }
-  .product-wrapper .product-social-buttons {
-    width: 100%; }
-    .product-wrapper .product-social-buttons button i {
-      margin-right: 0.75rem; }
 
-body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header {
+.social-buttons {
+  width: 100%; }
+  .social-buttons button i {
+    margin-right: 0.75rem; }
+
+body:not(.search):not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header {
   position: relative; }
-  body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header img {
+  body:not(.search):not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header img {
     width: 100%; }
-  body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header .entry-title, body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header .entry-meta {
+  body:not(.search):not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header .entry-title, body:not(.search):not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header .entry-meta {
     position: absolute;
     background-color: #248A83;
     color: #fff;
     font-family: Novecento,sans-serif; }
-    body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header .entry-title a, body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header .entry-meta a {
+    body:not(.search):not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header .entry-title a, body:not(.search):not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header .entry-meta a {
       color: #fff;
       text-decoration: none; }
-      body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header .entry-title a:hover, body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header .entry-meta a:hover {
+      body:not(.search):not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header .entry-title a:hover, body:not(.search):not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header .entry-meta a:hover {
         color: #fff9c0; }
-  body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header .entry-title {
+  body:not(.search):not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header .entry-title {
     top: 0;
     left: 0;
     padding: 0.50rem 1.5rem;
@@ -954,7 +1010,7 @@ body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-pro
     margin-top: 2.25rem;
     font-size: 2.35rem;
     line-height: 1.2; }
-  body:not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header .entry-meta {
+  body:not(.search):not(.home):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.page-template-about) .entry-header .entry-meta {
     bottom: 0;
     right: 0;
     margin-bottom: 0.4rem;
@@ -1135,7 +1191,7 @@ object {
 # Buttons
 --------------------------------------------------------------*/
 /* ------- Button for links ------- */
-.link-button, .product-wrapper .product-social-buttons button, .link-button__color-green {
+.link-button, .social-buttons button, .link-button__color-green {
   background: #fff;
   border: 1px solid #000;
   padding: 0.75rem 1.5rem;
@@ -1143,9 +1199,9 @@ object {
   font-family: "Novecento";
   font-size: 0.9rem;
   line-height: 1; }
-  .link-button:hover, .product-wrapper .product-social-buttons button:hover, .link-button__color-green:hover {
+  .link-button:hover, .social-buttons button:hover, .link-button__color-green:hover {
     background: #248A83; }
-    .link-button:hover a, .product-wrapper .product-social-buttons button:hover a, .link-button__color-green:hover a {
+    .link-button:hover a, .social-buttons button:hover a, .link-button__color-green:hover a {
       color: #fff; }
   .link-button__color-green {
     background: #248A83;

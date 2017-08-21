@@ -21,7 +21,7 @@ get_header(); ?>
 
 				<div class="product-stuff-links">
 					<?php foreach ($terms as $term): ; ?>
-						<a href="#"> <?php echo $term->name; ?></a>
+					<a href="<?php echo get_site_url(); ?>/<?php echo $term->taxonomy; ?>/<?php echo $term->slug; ?>"><?php echo $term->name; ?></a>
 					<?php endforeach; ?>
 				</div>
 			</header><!-- .page-header -->
