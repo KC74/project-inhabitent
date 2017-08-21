@@ -79,6 +79,7 @@ a {
 		margin-right: $base__space-unit;
 
 		ul {
+			display: flex;
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			position: absolute;
 			top: $base__space-unit;
@@ -105,14 +106,14 @@ a {
 		li:hover > ul,
 		li.focus > ul {
 			left: auto;
-		}
+		 }
 	}
-
+	
 	li {
-		float: right; // consider changing to flex box?
 		position: relative;
 		margin: $nav__link-top-bottom--spacing 0 $nav__link-top-bottom--spacing $base__space-unit;
 	}
+
 	a {
 		display: block;
 		text-decoration: none;
@@ -126,7 +127,7 @@ a {
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+	display: flex;
 }
 
 @media screen and (min-width: 768px) {
@@ -134,7 +135,7 @@ a {
 		display: none;
 	}
 	.main-navigation ul {
-		display: block;
+		display: flex;
 	}
 }
 
@@ -148,12 +149,10 @@ a {
 	}
 
 	.nav-previous {
-		float: left;
 		width: 50%;
 	}
 
 	.nav-next {
-		float: right;
 		text-align: right;
 		width: 50%;
 	}
