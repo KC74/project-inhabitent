@@ -186,7 +186,7 @@ body.search {
     }
 
     .site-footer {
-        margin: 0;
+        margin-top: 0;
     }
 }
 
@@ -234,6 +234,14 @@ body.archive.tax-product-type {
 
 /* ------- Find Us Page Styles ------- */
 body.page-template-default {
+	.content-area {
+		@extend .content-area-styles;
+	}
+
+	.site-footer {
+		margin: 0;
+	}
+
 	h1, h2 {
 		font-family: 'Novecento';
 		text-transform: uppercase;
@@ -271,5 +279,16 @@ body.page-template-default {
 			@extend .link-button__color-green;
 			border: none !important;
 		}
+	}
+}
+
+.single-adventure {
+
+	.custom-hero {
+		width: 100%;
+	}
+
+	.site-content {
+		width: 800px;
 	}
 }

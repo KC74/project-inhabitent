@@ -23,7 +23,7 @@
 
 /* ------- About Us Page Styles ------- */
 .page-template-about {
-	.entry-header.custom-hero {
+	.custom-hero {
 		h1.entry-title {
 			margin-top: 0;
 			color: #fff;
@@ -63,6 +63,16 @@ body.blog, body.archive, body.search {
 	}
 }
 
+body.blog {
+	.content-area {
+		@extend .content-area-styles;
+	}
+
+	.site-footer {
+		margin-top: 0;
+	}
+}
+
 body.post-template-default {
 	.social-buttons {
 		margin-top: $base__space-unit;
@@ -74,12 +84,22 @@ body.post-template-default {
 	}
 }
 
-
-/* ------- Content Area ------- */
-body:not(.tax-product-type):not(.page-template-about):not(.product-template-default):not(.post-type-archive):not(.home) .content-area {
+.content-area-styles {
 	padding: 3rem 5% 3rem 0;
 	width: 73%;
 	border-right: 1px solid $color__background-hr; 
+}
+
+
+/* ------- Content Area ------- */
+body:not(.tax-product-type)
+	:not(.page-template-about)
+	:not(.product-template-default)
+	:not(.post-type-archive)
+	:not(.single-adventure)
+
+	.content-area {
+		@extend .content-area-styles;
 }
 
 

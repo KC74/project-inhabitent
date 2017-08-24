@@ -782,7 +782,7 @@ h2.widget-title {
           flex-flow: row nowrap; }
 
 /* ------- About Us Page Styles ------- */
-.page-template-about .entry-header.custom-hero h1.entry-title {
+.page-template-about .custom-hero h1.entry-title {
   margin-top: 0;
   color: #fff;
   position: absolute;
@@ -809,18 +809,21 @@ body.blog .entry-readmore.link-button, body.blog .social-buttons button.entry-re
   body.blog .entry-readmore.link-button i, body.blog .social-buttons button.entry-readmore i, .social-buttons body.blog button.entry-readmore i, body.blog .entry-readmore.link-button__color-green i, body.blog body.page-template-default div[role='form'] p input.entry-readmore.wpcf7-form-control.wpcf7-submit i, body.page-template-default div[role='form'] p body.blog input.entry-readmore.wpcf7-form-control.wpcf7-submit i, body.archive .entry-readmore.link-button i, body.archive .social-buttons button.entry-readmore i, .social-buttons body.archive button.entry-readmore i, body.archive .entry-readmore.link-button__color-green i, body.archive body.page-template-default div[role='form'] p input.entry-readmore.wpcf7-form-control.wpcf7-submit i, body.page-template-default div[role='form'] p body.archive input.entry-readmore.wpcf7-form-control.wpcf7-submit i, body.search .entry-readmore.link-button i, body.search .social-buttons button.entry-readmore i, .social-buttons body.search button.entry-readmore i, body.search .entry-readmore.link-button__color-green i, body.search body.page-template-default div[role='form'] p input.entry-readmore.wpcf7-form-control.wpcf7-submit i, body.page-template-default div[role='form'] p body.search input.entry-readmore.wpcf7-form-control.wpcf7-submit i {
     margin-left: 5px; }
 
+body.blog .site-footer {
+  margin-top: 0; }
+
 body.post-template-default .social-buttons {
   margin-top: 1.5rem; }
   body.post-template-default .social-buttons button:hover {
     color: white;
     border: none; }
 
-/* ------- Content Area ------- */
-body:not(.tax-product-type):not(.page-template-about):not(.product-template-default):not(.post-type-archive):not(.home) .content-area {
+.content-area-styles, body.blog .content-area, body:not(.tax-product-type) :not(.page-template-about) :not(.product-template-default) :not(.post-type-archive) :not(.single-adventure) .content-area, body.page-template-default .content-area {
   padding: 3rem 5% 3rem 0;
   width: 73%;
   border-right: 1px solid #e1e1e1; }
 
+/* ------- Content Area ------- */
 /* ------- Posts and pages ------- */
 .site-content {
   width: 1120px;
@@ -1147,7 +1150,7 @@ body.search #primary.content-area {
   padding-bottom: 4.5rem; }
 
 body.search .site-footer {
-  margin: 0; }
+  margin-top: 0; }
 
 /* ------- 404 Page ------- */
 body.error404 h2 {
@@ -1177,6 +1180,9 @@ body.archive.tax-product-type .page-header p {
   line-height: 1.75rem; }
 
 /* ------- Find Us Page Styles ------- */
+body.page-template-default .site-footer {
+  margin: 0; }
+
 body.page-template-default h1, body.page-template-default h2 {
   font-family: 'Novecento';
   text-transform: uppercase;
@@ -1204,6 +1210,12 @@ body.page-template-default div[role='form'] {
     margin-top: 0.75rem; }
   body.page-template-default div[role='form'] p input.wpcf7-form-control.wpcf7-submit {
     border: none !important; }
+
+.single-adventure .custom-hero {
+  width: 100%; }
+
+.single-adventure .site-content {
+  width: 800px; }
 
 /*--------------------------------------------------------------
 # Footer Styles

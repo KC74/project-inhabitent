@@ -33,7 +33,7 @@ function inhabitent_header_logo()
     echo '
 		<style>                                                                   
 			#login h1 a { 
-				background: url('.get_stylesheet_directory_uri() .'/assets/images/logos/inhabitent-logo-text-dark.svg) !important;
+				background: url('.get_stylesheet_directory_uri() .'/images/logos/inhabitent-logo-text-dark.svg) !important;
 				background-repeat: no-repeat; !important;
 				background-size: 300px 53px !important;
 				width: 300px !important;
@@ -83,6 +83,29 @@ function inhabitent_dynamic_css() {
 	wp_add_inline_style( 'tent-style', $hero_css );
 }
 add_action( 'wp_enqueue_scripts', 'inhabitent_dynamic_css' );
+
+/**
+ * Make hero image customizable through CFS field or featured image.
+ */
+function inhabitent_adventure_header_css() {
+	if ( ! is_singular( 'adventure' ) ) {
+		return;
+	}
+	
+	$image = CFS()->get( 'adventure_header' );
+	if ( ! $image ) {
+		return;
+	}
+	$hero_css = ".single-adventure .custom-hero {
+		background:
+		url({$image}) no-repeat center bottom;
+		background-size: cover;
+		width: 100vw;
+		height: 100vh;
+	}";
+	wp_add_inline_style( 'hero-header-style', $hero_css );
+}
+add_action( 'wp_enqueue_scripts', 'inhabitent_adventure_header_css' );
 
 /**
  * Function that limits the amount of posts per page in the archives
