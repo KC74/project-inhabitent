@@ -291,4 +291,16 @@ body.page-template-default {
 	.site-content {
 		width: 800px;
 	}
+
+	.entry-title,
+	.post-author {
+		text-transform: uppercase;
+		font-size: $base__space-unit * 1.75;
+		font-family: 'Novecento';
+		margin: 0;
+	}
+
+	.post-author {
+		font-size: $base__space-unit;
+	}
 }

@@ -11,7 +11,7 @@
     <div class="adventure-wrapper">
         <div class="entry-content">
             <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-            <span class="post-author"><?php the_author(); ?></span>
+            <span class="post-author">By <?php the_author(); ?></span>
             <p class="product-price"><?php echo CFS()->get( 'adventure_story' ); ?></p>
             <div class="social-buttons">
                 <button type="social-btn"><i class="fa fa-facebook" aria-hidden="true"></i>Like</button>

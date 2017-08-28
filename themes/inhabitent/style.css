@@ -1217,6 +1217,16 @@ body.page-template-default div[role='form'] {
 .single-adventure .site-content {
   width: 800px; }
 
+.single-adventure .entry-title,
+.single-adventure .post-author {
+  text-transform: uppercase;
+  font-size: 2.625rem;
+  font-family: 'Novecento';
+  margin: 0; }
+
+.single-adventure .post-author {
+  font-size: 1.5rem; }
+
 /*--------------------------------------------------------------
 # Footer Styles
 --------------------------------------------------------------*/
