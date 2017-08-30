@@ -126,9 +126,12 @@ add_filter('pre_get_posts', 'inhabitent_limit_archive_posts');
  * Shop Stuff
  */
 add_filter( 'get_the_archive_title', function ( $title ) {
-	
-		return $title = 'Shop Stuff';
-	
+		
+		if ( is_post_type_archive( 'product' ) ) {
+			return $title = 'Shop Stuff';
+		} else if( is_post_type_archive( 'adventure' ) ) {
+			return $title = 'Latest Adventures';
+		}
 });
 
 /**

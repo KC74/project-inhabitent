@@ -663,6 +663,75 @@ body.archive h1 {
         text-transform: none;
         text-decoration: none; }
 
+/* ------- ADVENTURE ARCHIVES ---------- */
+body.post-type-archive-adventure .page-title {
+  border-bottom: 1px dashed #d1d1d1;
+  padding-bottom: 2.5rem;
+  margin-bottom: 1.5rem; }
+
+body.post-type-archive-adventure .content-area {
+  width: 100%; }
+
+body.post-type-archive-adventure .adventure-archive-grid {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin: 4.5rem 0 1.5rem 0; }
+  body.post-type-archive-adventure .adventure-archive-grid .archive-grid-item {
+    -ms-flex: 1 0 49%;
+        flex: 1 0 49%;
+    max-width: 49%;
+    margin-bottom: 1.5rem; }
+    body.post-type-archive-adventure .adventure-archive-grid .archive-grid-item .adventure-wrapper {
+      position: relative;
+      overflow: hidden;
+      max-height: 550px;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%; }
+      body.post-type-archive-adventure .adventure-archive-grid .archive-grid-item .adventure-wrapper:before {
+        content: "";
+        padding-top: 100%; }
+      body.post-type-archive-adventure .adventure-archive-grid .archive-grid-item .adventure-wrapper img {
+        position: absolute;
+        max-width: none;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        max-height: 550px; }
+      body.post-type-archive-adventure .adventure-archive-grid .archive-grid-item .adventure-wrapper a {
+        position: absolute;
+        z-index: 2;
+        text-decoration: none; }
+      body.post-type-archive-adventure .adventure-archive-grid .archive-grid-item .adventure-wrapper h2 {
+        color: white;
+        font-size: 3rem;
+        font-weight: 400;
+        letter-spacing: 2px; }
+        body.post-type-archive-adventure .adventure-archive-grid .archive-grid-item .adventure-wrapper h2:hover {
+          color: #F0E4D1; }
+      body.post-type-archive-adventure .adventure-archive-grid .archive-grid-item .adventure-wrapper:after {
+        content: "";
+        background: rgba(0, 0, 0, 0.35) no-repeat center;
+        background-size: cover;
+        position: absolute;
+        height: 100%;
+        width: 100%; }
+      body.post-type-archive-adventure .adventure-archive-grid .archive-grid-item .adventure-wrapper .adventure-readmore {
+        background: none;
+        color: white;
+        border: 1px solid white;
+        width: 150px;
+        text-align: center; }
+        body.post-type-archive-adventure .adventure-archive-grid .archive-grid-item .adventure-wrapper .adventure-readmore:hover {
+          background: #19625D;
+          border: 1px solid #19625D; }
+      body.post-type-archive-adventure .adventure-archive-grid .archive-grid-item .adventure-wrapper .adventure-readmore, body.post-type-archive-adventure .adventure-archive-grid .archive-grid-item .adventure-wrapper h2 {
+        margin: 4.5rem 1.5rem; }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/

@@ -31,9 +31,8 @@ body.archive {
         text-align: center;
         letter-spacing: 2px;
         font-size: 2.4rem;
-
-
     }
+
 }
 /* ------- Product Archive ------- */
 
@@ -98,6 +97,98 @@ body.archive {
                 background-color: #fff;
                 text-transform: none;
                 text-decoration: none;
+            }
+        }
+    }
+}
+
+/* ------- ADVENTURE ARCHIVES ---------- */
+body.post-type-archive-adventure {
+    .page-title {
+        border-bottom: 1px dashed #d1d1d1;
+        padding-bottom: 2.5rem;
+        margin-bottom: $base__space-unit;
+    }
+
+    .content-area {
+        width: 100%;
+    }
+
+    .adventure-archive-grid {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin: $base__space-unit * 3 0 $base__space-unit 0;
+        
+        .archive-grid-item {
+            flex: 1 0 49%;
+            max-width: 49%;
+            margin-bottom: $base__space-unit;
+            
+            
+            .adventure-wrapper {
+                position: relative;
+                overflow: hidden;
+                max-height: 550px;
+                display: flex;
+                width: 100%;
+
+                &:before {
+                    content: "";
+                    padding-top: 100%;
+                }
+
+                img {
+                    position: absolute;
+                    max-width: none;
+                    transform: translate(-50%, -50%);
+                    top: 50%;
+                    left: 50%;
+                    max-height: 550px;
+                }
+
+                a {
+                    position: absolute;
+                    z-index: 2;
+                    text-decoration: none;
+                }
+
+                h2 {
+                    color: white;
+                    font-size: 3rem;
+                    font-weight: 400;
+                    letter-spacing: 2px;
+
+                    &:hover {
+                        color: $color__title-link-hover;
+                    }
+                }
+
+                &:after {
+                    content: "";
+                    background: rgba(0,0,0, 0.35) no-repeat center;
+                    background-size: cover;
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                }
+
+                .adventure-readmore {
+                    background: none;
+                    color: white;
+                    border: 1px solid white;
+                    width: 150px;
+                    text-align: center;
+
+                    &:hover {
+                        background: $color__button-green-hover;
+                        border: 1px solid $color__button-green-hover;
+                    }
+                }
+
+                .adventure-readmore, h2 {
+                    margin: 4.5rem 1.5rem;
+                }
             }
         }
     }
