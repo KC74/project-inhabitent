@@ -1169,6 +1169,87 @@ body.home.page-template-default .container h2, body.home.page-template-default .
       width: 40%;
       margin: 0.75rem; }
 
+/* ------- Latest Adventures ------- */
+.latest-adventures-container {
+  width: 1120px;
+  margin: 0 auto;
+  width: 1120px;
+  border-bottom: 1.5rem solid white; }
+  .latest-adventures-container .latest-adventures {
+    display: -ms-grid;
+    display: grid;
+    height: 550px;
+    grid-template: "left obj1 obj1" 1fr "left obj2 obj3" 1fr / 49% 24.5% 24.5%; }
+    .latest-adventures-container .latest-adventures .latest-adventures-block-item {
+      overflow: hidden;
+      max-height: 275px;
+      height: 100%;
+      position: relative;
+      border-bottom: 1.5rem solid white; }
+      .latest-adventures-container .latest-adventures .latest-adventures-block-item .latest-adventures-wrapper .info-container {
+        margin: 1.5rem;
+        position: relative; }
+      .latest-adventures-container .latest-adventures .latest-adventures-block-item .latest-adventures-wrapper img {
+        position: absolute;
+        max-width: none;
+        max-height: 400px;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%; }
+      .latest-adventures-container .latest-adventures .latest-adventures-block-item .latest-adventures-wrapper h3, .latest-adventures-container .latest-adventures .latest-adventures-block-item .latest-adventures-wrapper .entry-readmore {
+        z-index: 2; }
+      .latest-adventures-container .latest-adventures .latest-adventures-block-item .latest-adventures-wrapper a {
+        z-index: 2;
+        text-decoration: none;
+        color: white; }
+        .latest-adventures-container .latest-adventures .latest-adventures-block-item .latest-adventures-wrapper a:hover {
+          color: #F0E4D1; }
+      .latest-adventures-container .latest-adventures .latest-adventures-block-item .latest-adventures-wrapper h3 {
+        color: white;
+        font-weight: 400;
+        letter-spacing: 2px;
+        text-align: left;
+        text-transform: none;
+        font-size: 2.5rem;
+        position: relative;
+        margin: 1.5rem 0; }
+      .latest-adventures-container .latest-adventures .latest-adventures-block-item .latest-adventures-wrapper .entry-readmore {
+        background: none;
+        border: 1px solid white;
+        width: 150px;
+        text-align: center;
+        position: absolute; }
+        .latest-adventures-container .latest-adventures .latest-adventures-block-item .latest-adventures-wrapper .entry-readmore a {
+          color: white; }
+        .latest-adventures-container .latest-adventures .latest-adventures-block-item .latest-adventures-wrapper .entry-readmore:hover {
+          background: #19625D;
+          border: 1px solid #19625D; }
+      .latest-adventures-container .latest-adventures .latest-adventures-block-item .latest-adventures-wrapper:after {
+        content: "";
+        background: rgba(0, 0, 0, 0.35);
+        background-size: cover;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%; }
+      .latest-adventures-container .latest-adventures .latest-adventures-block-item:nth-child(4) {
+        grid-area: left;
+        max-height: 550px; }
+        .latest-adventures-container .latest-adventures .latest-adventures-block-item:nth-child(4) img {
+          max-height: 550px; }
+      .latest-adventures-container .latest-adventures .latest-adventures-block-item:nth-child(3) {
+        grid-area: obj1; }
+      .latest-adventures-container .latest-adventures .latest-adventures-block-item:nth-child(2) {
+        grid-area: obj2; }
+      .latest-adventures-container .latest-adventures .latest-adventures-block-item:nth-child(1) {
+        grid-area: obj3; }
+      .latest-adventures-container .latest-adventures .latest-adventures-block-item:nth-child(4), .latest-adventures-container .latest-adventures .latest-adventures-block-item:nth-child(2) {
+        border-right: 1.5rem solid white; }
+      .latest-adventures-container .latest-adventures .latest-adventures-block-item:nth-child(2) h3, .latest-adventures-container .latest-adventures .latest-adventures-block-item:nth-child(1) h3 {
+        font-size: 1.5rem; }
+
 /* ------- Search Form ------- */
 form[role='search'] fieldset {
   border: none;
