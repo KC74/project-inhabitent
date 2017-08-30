@@ -1175,6 +1175,11 @@ body.home.page-template-default .container h2, body.home.page-template-default .
   margin: 0 auto;
   width: 1120px;
   border-bottom: 1.5rem solid white; }
+  .latest-adventures-container .latest-adventures-readmore.link-button, .latest-adventures-container .social-buttons button.latest-adventures-readmore, .social-buttons .latest-adventures-container button.latest-adventures-readmore, .latest-adventures-container .latest-adventures-readmore.link-button__color-green, .latest-adventures-container body.page-template-default div[role='form'] p input.latest-adventures-readmore.wpcf7-form-control.wpcf7-submit, body.page-template-default div[role='form'] p .latest-adventures-container input.latest-adventures-readmore.wpcf7-form-control.wpcf7-submit {
+    width: 200px;
+    text-align: center; }
+    .latest-adventures-container .latest-adventures-readmore.link-button a, .latest-adventures-container .social-buttons button.latest-adventures-readmore a, .social-buttons .latest-adventures-container button.latest-adventures-readmore a, .latest-adventures-container .latest-adventures-readmore.link-button__color-green a, .latest-adventures-container body.page-template-default div[role='form'] p input.latest-adventures-readmore.wpcf7-form-control.wpcf7-submit a, body.page-template-default div[role='form'] p .latest-adventures-container input.latest-adventures-readmore.wpcf7-form-control.wpcf7-submit a {
+      text-decoration: none; }
   .latest-adventures-container .latest-adventures {
     display: -ms-grid;
     display: grid;

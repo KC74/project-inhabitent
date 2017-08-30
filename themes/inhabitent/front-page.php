@@ -85,6 +85,9 @@ get_header(); ?>
                             </div><!-- .latest-adventures-block-item -->
                         <?php endforeach; wp_reset_postdata(); ?>
                 </div><!-- .most-recent-journals -->
+                <div class="latest-adventures-readmore link-button">
+                    <a href="<?php echo get_post_type_archive_link( 'adventure' )?>">More Adventures</a>
+                </div><!-- .entry-readmore -->
             </div><!-- .container -->
         </main><!-- #main -->
     </div><!-- #primary -->

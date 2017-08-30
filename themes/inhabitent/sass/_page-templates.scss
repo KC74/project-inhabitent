@@ -124,12 +124,22 @@ body.home.page-template-default {
 	width: 1120px;
 	border-bottom: $base__space-unit solid white;
 	
+	.latest-adventures-readmore.link-button {
+		width: 200px;
+		text-align: center;
+
+		a {
+			text-decoration: none;
+		}
+	}
+
 	.latest-adventures {
 		display: grid;
 		height: 550px;
 		grid-template: 	"left obj1 obj1" 1fr
-		"left obj2 obj3" 1fr
-		/ 49% 24.5% 24.5%;
+						"left obj2 obj3" 1fr
+						/ 49% 24.5% 24.5%;
+
 		
 		.latest-adventures-block-item {
 			overflow: hidden;
@@ -232,7 +242,6 @@ body.home.page-template-default {
 
 			&:nth-child(4),
 			&:nth-child(2) {
-				// margin-right: $base__space-unit;
 				border-right: $base__space-unit solid white;
 			}
 
